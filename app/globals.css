@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: var(--font-poppins);
+  --font-ibm: var(--font-ibm-plex-sans);
+  --font-serif: var(--font-ibm-plex-serif);
+  --font-inter: var(--font-inter);
+}
+
+/* Reset inside @layer base so Tailwind utilities can override it */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-ibm-plex-sans), 'IBM Plex Sans', sans-serif;
+    background-color: #ffffff;
+    color: #141313;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: rgba(255, 108, 99, 0.2);
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(20, 19, 19, 0.15);
+    border-radius: 2px;
+  }
+}

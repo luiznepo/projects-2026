@@ -1,0 +1,132 @@
+import { SiteContent } from './types'
+
+export const ptContent: SiteContent = {
+  meta: {
+    title: 'Luiz Nepo — UX/UI Designer & Product Designer',
+    description: 'Portfólio de Luiz Felipe — UX/UI Designer e Product Designer com mais de 7 anos de experiência.',
+  },
+  nav: {
+    home: 'INICIO',
+    about: 'SOBRE',
+    skills: 'HABILIDADES',
+    works: 'PROJETOS',
+  },
+  hero: {
+    name: 'Meu nome é Luiz Felipe',
+    role: 'Transformo pesquisa de usuário em interfaces que convertem — 7 anos, 3 países, 20+ produtos.',
+    cta: 'Conheça meu trabalho',
+    phone: '+55 011 94935 7300',
+    email: 'luiznepo@gmail.com',
+  },
+  about: {
+    label: 'Prazer em ter você aqui!',
+    title: 'Bem vindo',
+    stat1Value: '7+',
+    stat1Label: 'Anos de\nexperiência',
+    stat1Desc: 'Cresci em São Paulo, com fins de semana na casa do tio programador. Dos rabiscos inspirados em animes à formação em Ciência da Informação pela USP (2018) — aprendi cedo que criatividade e informação são inseparáveis.',
+    stat2Value: '20+',
+    stat2Label: 'Projetos\nrealizados',
+    stat2Desc: 'Na faculdade, cofundei o primeiro centro estudantil do meu curso e criei sites para a comunidade. Hoje sou Designer de Produto Sênior no Mercado Pago, criando uma plataforma de assinaturas para milhares de clientes.',
+    phone: '+55 011 94935 7300',
+    email: 'luiznepo@gmail.com',
+    location: 'São Paulo, SP',
+    quote: '"Luiz é uma pessoa que está sempre disposta a ajudar e a dar o exemplo de boa execução e paixão pelo que faz. É uma referência em termos de design e sempre faz as perguntas certas e dá a sua opinião para que os projetos sejam feitos da melhor maneira."',
+    quoteAuthor: 'Ramiro Paz, Gerente de produtos',
+  },
+  experience: {
+    label: 'Experiência',
+    title: 'Minha experiência',
+    resumeBtn: 'Baixe meu currículo',
+    resumeUrl: '/cv/cv-pt.docx',
+    items: [
+      { role: 'Senior UI/UX Designer', period: '2024 - atual (promoção)', company: 'Mercado Livre' },
+      { role: 'Semi Senior UI/UX Designer', period: '2021 - 2024', company: 'Mercado Livre' },
+      { role: 'Pleno UI/UX Designer', period: '2020 - 2021', company: 'Banco Bmg' },
+      { role: 'Consultor UI/UX Designer', period: '2019 - 2020', company: 'Accenture interactive' },
+      { role: 'Junior UI/UX Designer', period: '2018 - 2019', company: 'Prox - Isquik' },
+    ],
+  },
+  skills: {
+    label: 'Habilidades',
+    title: 'Minhas habilidades',
+    items: [
+      {
+        icon: '⚙️',
+        title: 'Processos',
+        description: 'Double Diamond: Aplicação da metodologia de descoberta e definição para garantir que o problema certo está sendo resolvido antes da fase de entrega. Hierarquia de Informação: Organização estratégica de elementos na tela para guiar o olhar do usuário e priorizar as ações de maior conversão. Benchmark: Análise profunda de concorrentes e referências de mercado para identificar oportunidades de diferenciação e padrões de usabilidade. Análise Heurística: Auditoria técnica de interfaces baseada em princípios de usabilidade para identificar e corrigir falhas de experiência de forma ágil.',
+        tools: ['Miro', 'FigJam', 'Jira', 'Maze', 'Slack'],
+      },
+      {
+        icon: '🎨',
+        title: 'Design Craft',
+        description: 'Wireframes: Construção de esqueletos de baixa e média fidelidade focados na estrutura e funcionalidade, permitindo iterações rápidas antes do refinamento visual. Ícones: Desenvolvimento de sets de ícones proprietários ou curadoria técnica baseada em grid, legibilidade e acessibilidade. Ilustrações 3D: Integração de elementos visuais tridimensionais para enriquecer a interface e modernizar a linguagem visual do produto.',
+        tools: ['Figma', 'Canva', 'Photoshop', 'Illustrator', 'Lottiefiles'],
+      },
+      {
+        icon: '🛠️',
+        title: 'Figma',
+        description: 'Protótipos: Elaboração de protótipos de alta fidelidade com lógica avançada e interatividade complexa para validação de fluxos críticos e testes de usabilidade realistas. Componentes: Criação e manutenção de bibliotecas escaláveis e Design Systems, utilizando Auto Layout, Variables e variantes para garantir consistência e agilidade no design. Fluxos: Mapeamento detalhado da jornada do usuário e arquitetura de informação, garantindo que a navegação seja intuitiva e cubra todos os cenários de erro e sucesso.',
+        tools: ['Figma', 'Figma Make', 'FigJam'],
+      },
+      {
+        icon: '🗣️',
+        title: 'Comunicação',
+        description: 'Apresentações: Tradução de decisões de design em argumentos de negócio para stakeholders, focando em métricas e na resolução de problemas do usuário. Kick-offs: Liderança de reuniões de alinhamento inicial para definir escopo, objetivos de negócio e expectativas técnicas entre produtos e engenharia. Dinâmicas: Facilitação de workshops de co-criação e sessões de brainstorming para destravar problemas e gerar ideias colaborativas. Design Critiques: Promoção de uma cultura de feedback construtivo para elevar a barra de qualidade visual e funcional.',
+        tools: ['Slack', 'Jira', 'Miro', 'ChatGPT', 'Gemini'],
+      },
+      {
+        icon: '🔍',
+        title: 'Research',
+        description: 'Teste de Usabilidade: Planejamento e execução de testes moderados e não-moderados para identificar pontos de fricção e validar hipóteses de solução. Pesquisas Quali e Quanti: Aplicação de métodos mistos (entrevistas, formulários, análise de dados) para entender o comportamento do usuário e sustentar decisões de design. Recrutamento: Definição de perfis de usuários-chave e gestão do processo de recrutamento para garantir amostras qualificadas. Plano de Pesquisa: Estruturação de cronogramas e metodologias de investigação alinhadas às perguntas de negócio.',
+        tools: ['Maze', 'Miro', 'ChatGPT', 'Claude Code', 'Gemini'],
+      },
+    ],
+  },
+  works: {
+    label: 'Projetos',
+    title: 'PROJETOS RECENTES',
+    moreBtn: 'Outros projetos',
+    lessBtn: 'Ver menos',
+    projectCta: 'Conheça o projeto',
+    projects: [
+      {
+        client: 'MERCADO PAGO - Desktop & mobile',
+        title: 'CATÁLOGO DE PRODUTOS',
+        description: 'O catálogo de produtos do Mercado Pago é uma ferramenta central do Software de Gestão (SWE) que permite aos lojistas cadastrar, organizar e controlar o estoque de seus itens',
+        image: 'https://www.figma.com/api/mcp/asset/9041fff6-0d2e-431d-b610-ae60050cdf9e',
+        ctaLink: '/pt/projetos/catalogo-de-produtos',
+      },
+      {
+        client: 'MERCADO PAGO - Desktop',
+        title: 'EMISSOR DE NOTAS FISCAIS',
+        description: 'A ferramenta permite emitir, imprimir, baixar e enviar por e-mail notas fiscais (como NFe e NFCe) diretamente pela plataforma web ou pelos terminais Smart',
+        image: 'https://www.figma.com/api/mcp/asset/524a3ef7-ccf4-4f92-b415-f48fdf5fb80d',
+        ctaLink: '/pt/projetos/emissor-de-notas-fiscais',
+      },
+      {
+        client: 'MERCADO PAGO - Desktop & Smart POS',
+        title: 'FRENTE DE CAIXA',
+        description: 'O frente de caixa (PDV) do Mercado Pago é uma funcionalidade do Software de Gestão focada no registro ágil de vendas e na finalização de cobranças no dia a dia do lojista',
+        image: 'https://www.figma.com/api/mcp/asset/4046ed2c-05fc-4223-8b69-4cb1b0e25ef1',
+        ctaLink: '/pt/projetos/frente-de-caixa',
+      },
+    ],
+    extraProjects: [
+      {
+        client: 'BANCO BMG - Mobile',
+        title: 'SAQUE DIGITAL',
+        description: 'A conta digital do Banco Bmg oferece a modalidade de saque através das redes de caixa eletrônico Banco24horas e Saque Pague, porém para realizar esse saque o cliente precisa utilizar o cartão de débito ou crédito',
+        embedUrl: 'https://www.behance.net/embed/project/122787357?ilo0=1',
+        ctaLink: 'https://www.behance.net/gallery/122787357/Saque-digital',
+      },
+      {
+        client: 'BANCO BMG - Mobile',
+        title: 'RECARGA DE CELULAR',
+        description: 'Oferecer um serviço de recarga de celular de uma maneira fácil, simples e rápida, aumentando a satisfação dos clientes da conta digital',
+        embedUrl: 'https://www.behance.net/embed/project/122719481?ilo0=1',
+        ctaLink: 'https://www.behance.net/gallery/122719481/Recarga-de-celular',
+      },
+    ],
+  },
+  langButtons: { pt: 'Português', es: 'Espanhol', en: 'English' },
+}

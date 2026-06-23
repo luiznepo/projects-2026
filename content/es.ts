@@ -1,0 +1,132 @@
+import { SiteContent } from './types'
+
+export const esContent: SiteContent = {
+  meta: {
+    title: 'Luiz Nepo — Diseñador UX/UI & Product Designer',
+    description: 'Portafolio de Luiz Felipe — Diseñador UX/UI y Product Designer con más de 7 años de experiencia.',
+  },
+  nav: {
+    home: 'INICIO',
+    about: 'SOBRE MÍ',
+    skills: 'HABILIDADES',
+    works: 'PROYECTOS',
+  },
+  hero: {
+    name: 'Mi nombre\nes Luiz Felipe',
+    role: 'Transformo investigación de usuarios en interfaces que convierten — 7 años, 3 países, 20+ productos.',
+    cta: 'Conoce mi trabajo',
+    phone: '+55 011 94935 7300',
+    email: 'luiznepo@gmail.com',
+  },
+  about: {
+    label: '¡Un placer tenerte aquí!',
+    title: 'Bienvenido',
+    stat1Value: '7+',
+    stat1Label: 'Años de\nexperiencia',
+    stat1Desc: 'Crecí en São Paulo, con fines de semana en casa de mi tío programador. De los bocetos inspirados en animes a la carrera en Ciencias de la Información en la USP (2018) — aprendí pronto que creatividad e información son inseparables.',
+    stat2Value: '20+',
+    stat2Label: 'Proyectos\nrealizados',
+    stat2Desc: 'En la universidad, cofundé el primer centro estudiantil de mi carrera y creé sitios web para la comunidad. Hoy soy Diseñador de Producto Senior en Mercado Pago, construyendo una plataforma de suscripciones usada por miles de clientes.',
+    phone: '+55 011 94935 7300',
+    email: 'luiznepo@gmail.com',
+    location: 'São Paulo, SP',
+    quote: '"Luiz es una persona que siempre está dispuesta a ayudar y dar el ejemplo de buena ejecución y pasión por lo que hace. Es una referencia en términos de diseño y siempre hace las preguntas correctas."',
+    quoteAuthor: 'Ramiro Paz, Gerente de productos',
+  },
+  experience: {
+    label: 'Experiencia',
+    title: 'Mi experiencia',
+    resumeBtn: 'Descargar curriculum',
+    resumeUrl: '/cv/cv-es.docx',
+    items: [
+      { role: 'Senior UI/UX Designer', period: '2024 - actual (promoción)', company: 'Mercado Libre' },
+      { role: 'Semi Senior UI/UX Designer', period: '2021 - 2024', company: 'Mercado Libre' },
+      { role: 'Pleno UI/UX Designer', period: '2020 - 2021', company: 'Banco Bmg' },
+      { role: 'Consultor UI/UX Designer', period: '2019 - 2020', company: 'Accenture interactive' },
+      { role: 'junior UI/UX Designer', period: '2018 - 2019', company: 'Prox - Isquik' },
+    ],
+  },
+  skills: {
+    label: 'Habilidades',
+    title: 'Mis habilidades',
+    items: [
+      {
+        icon: '⚙️',
+        title: 'Procesos',
+        description: 'Double Diamond: Aplicación de la metodología de descubrimiento y definición para garantizar que el problema correcto se resuelve antes de la fase de entrega. Jerarquía de Información: Organización estratégica de elementos en pantalla para guiar la mirada del usuario y priorizar las acciones de mayor conversión. Benchmark: Análisis profundo de competidores y referencias de mercado para identificar oportunidades de diferenciación.',
+        tools: ['Miro', 'FigJam', 'Jira', 'Maze', 'Slack'],
+      },
+      {
+        icon: '🎨',
+        title: 'Design Craft',
+        description: 'Wireframes: Construcción de esqueletos de baja y media fidelidad enfocados en la estructura y funcionalidad, permitiendo iteraciones rápidas antes del refinamiento visual. Íconos: Desarrollo de sets de íconos propietarios o curaduría técnica basada en grid, legibilidad y accesibilidad. Ilustraciones 3D: Integración de elementos visuales tridimensionales para enriquecer la interfaz.',
+        tools: ['Figma', 'Canva', 'Photoshop', 'Illustrator', 'Lottiefiles'],
+      },
+      {
+        icon: '🛠️',
+        title: 'Figma',
+        description: 'Prototipos: Elaboración de prototipos de alta fidelidad con lógica avanzada e interactividad compleja para validación de flujos críticos. Componentes: Creación y mantenimiento de bibliotecas escalables y Design Systems utilizando Auto Layout, Variables y variantes. Flujos: Mapeo detallado del recorrido del usuario y arquitectura de información.',
+        tools: ['Figma', 'Figma Make', 'FigJam'],
+      },
+      {
+        icon: '🗣️',
+        title: 'Comunicación',
+        description: 'Presentaciones: Traducción de decisiones de diseño en argumentos de negocio para stakeholders. Kick-offs: Liderazgo de reuniones de alineación inicial para definir alcance y objetivos. Dinámicas: Facilitación de workshops de co-creación y sesiones de brainstorming para desbloquear problemas.',
+        tools: ['Slack', 'Jira', 'Miro', 'ChatGPT', 'Gemini'],
+      },
+      {
+        icon: '🔍',
+        title: 'Research',
+        description: 'Pruebas de Usabilidad: Planificación y ejecución de pruebas moderadas y no moderadas para identificar puntos de fricción. Investigaciones Cuali y Cuanti: Aplicación de métodos mixtos para entender el comportamiento del usuario. Reclutamiento: Definición de perfiles de usuarios clave y gestión del proceso de reclutamiento.',
+        tools: ['Maze', 'Miro', 'ChatGPT', 'Claude Code', 'Gemini'],
+      },
+    ],
+  },
+  works: {
+    label: 'Proyectos',
+    title: 'PROYECTOS RECIENTES',
+    moreBtn: 'Otros proyectos',
+    lessBtn: 'Ver menos',
+    projectCta: 'Ver proyecto',
+    projects: [
+      {
+        client: 'MERCADO PAGO - Desktop & mobile',
+        title: 'CATÁLOGO DE PRODUCTOS',
+        description: 'El catálogo de productos de Mercado Pago es una herramienta central del Software de Gestión que permite a los comerciantes registrar, organizar y controlar el inventario de sus artículos',
+        image: 'https://www.figma.com/api/mcp/asset/9041fff6-0d2e-431d-b610-ae60050cdf9e',
+        ctaLink: '/es/projetos/catalogo-de-produtos',
+      },
+      {
+        client: 'MERCADO PAGO - Desktop',
+        title: 'EMISOR DE FACTURAS',
+        description: 'La herramienta permite emitir, imprimir, descargar y enviar por correo facturas directamente desde la plataforma web o los terminales Smart',
+        image: 'https://www.figma.com/api/mcp/asset/524a3ef7-ccf4-4f92-b415-f48fdf5fb80d',
+        ctaLink: '/es/projetos/emissor-de-notas-fiscais',
+      },
+      {
+        client: 'MERCADO PAGO - Desktop & Smart POS',
+        title: 'PUNTO DE VENTA',
+        description: 'El punto de venta (PDV) de Mercado Pago es una funcionalidad del Software de Gestión enfocada en el registro ágil de ventas y la finalización de cobros en el día a día del comerciante',
+        image: 'https://www.figma.com/api/mcp/asset/4046ed2c-05fc-4223-8b69-4cb1b0e25ef1',
+        ctaLink: '/es/projetos/frente-de-caixa',
+      },
+    ],
+    extraProjects: [
+      {
+        client: 'BANCO BMG - Mobile',
+        title: 'RETIRO DIGITAL',
+        description: 'La cuenta digital del Banco Bmg ofrece la modalidad de retiro a través de las redes de cajero automático Banco24horas y Saque Pague, pero para realizar el retiro el cliente necesita usar su tarjeta de débito o crédito',
+        embedUrl: 'https://www.behance.net/embed/project/122787357?ilo0=1',
+        ctaLink: 'https://www.behance.net/gallery/122787357/Saque-digital',
+      },
+      {
+        client: 'BANCO BMG - Mobile',
+        title: 'RECARGA DE CELULAR',
+        description: 'Ofrecer un servicio de recarga de celular de forma fácil, simple y rápida, aumentando la satisfacción de los clientes de la cuenta digital',
+        embedUrl: 'https://www.behance.net/embed/project/122719481?ilo0=1',
+        ctaLink: 'https://www.behance.net/gallery/122719481/Recarga-de-celular',
+      },
+    ],
+  },
+  langButtons: { pt: 'Portugués', es: 'Español', en: 'English' },
+}

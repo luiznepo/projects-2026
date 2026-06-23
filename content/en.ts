@@ -1,0 +1,132 @@
+import { SiteContent } from './types'
+
+export const enContent: SiteContent = {
+  meta: {
+    title: 'Luiz Nepo — UX/UI Designer & Product Designer',
+    description: 'Portfolio of Luiz Felipe — UX/UI Designer and Product Designer with 7+ years of experience.',
+  },
+  nav: {
+    home: 'HOME',
+    about: 'ABOUT',
+    skills: 'SKILLS',
+    works: 'PROJECTS',
+  },
+  hero: {
+    name: 'I am Luiz Felipe',
+    role: 'I turn user research into interfaces that convert — 7 years, 3 countries, 20+ products.',
+    cta: 'See my work',
+    phone: '+55 011 94935 7300',
+    email: 'luiznepo@gmail.com',
+  },
+  about: {
+    label: 'Nice to have you here!',
+    title: 'Welcome',
+    stat1Value: '7+',
+    stat1Label: 'Years of\nexperience',
+    stat1Desc: "I grew up in São Paulo, spending weekends at my uncle's — a software developer who sparked my curiosity for tech. From anime-inspired sketches to a degree in Information Science at USP (2018), I learned early that creativity and information are inseparable.",
+    stat2Value: '20+',
+    stat2Label: 'Projects\ncompleted',
+    stat2Desc: 'In college, I co-founded the first student center in my program and built websites for the community. Today I am a Senior Product Designer at Mercado Pago, building a subscription platform used by thousands of clients.',
+    phone: '+55 011 94935 7300',
+    email: 'luiznepo@gmail.com',
+    location: 'São Paulo, SP',
+    quote: '"Luiz is a person who is always willing to help and set the example of good execution and passion for what he does. He is a reference in terms of design and always asks the right questions."',
+    quoteAuthor: 'Ramiro Paz, Product Manager',
+  },
+  experience: {
+    label: 'Experience',
+    title: 'My experience',
+    resumeBtn: 'Download resume',
+    resumeUrl: '/cv/cv-en.docx',
+    items: [
+      { role: 'Senior UI/UX Designer', period: '2024 - present (promotion)', company: 'Mercado Livre' },
+      { role: 'Mid-Senior UI/UX Designer', period: '2021 - 2024', company: 'Mercado Livre' },
+      { role: 'Mid-Level UI/UX Designer', period: '2020 - 2021', company: 'Banco Bmg' },
+      { role: 'UI/UX Design Consultant', period: '2019 - 2020', company: 'Accenture interactive' },
+      { role: 'Junior UI/UX Designer', period: '2018 - 2019', company: 'Prox - Isquik' },
+    ],
+  },
+  skills: {
+    label: 'Skills',
+    title: 'My skills',
+    items: [
+      {
+        icon: '⚙️',
+        title: 'Processes',
+        description: 'Double Diamond: Application of discovery and definition methodology to ensure the right problem is being solved before the delivery phase. Information Hierarchy: Strategic organization of screen elements to guide user attention and prioritize highest-conversion actions. Benchmark: Deep analysis of competitors and market references to identify differentiation opportunities and usability patterns. Heuristic Analysis: Technical interface auditing based on usability principles.',
+        tools: ['Miro', 'FigJam', 'Jira', 'Maze', 'Slack'],
+      },
+      {
+        icon: '🎨',
+        title: 'Design Craft',
+        description: 'Wireframes: Building low and mid-fidelity skeletons focused on structure and functionality, enabling rapid iterations before visual refinement. Icons: Development of proprietary icon sets or technical curation based on grid, legibility and accessibility. 3D Illustrations: Integration of three-dimensional visual elements to enrich the interface and modernize the product visual language.',
+        tools: ['Figma', 'Canva', 'Photoshop', 'Illustrator', 'Lottiefiles'],
+      },
+      {
+        icon: '🛠️',
+        title: 'Figma',
+        description: 'Prototypes: Creation of high-fidelity prototypes with advanced logic and complex interactivity for critical flow validation and realistic usability testing. Components: Creation and maintenance of scalable libraries and Design Systems using Auto Layout, Variables and variants. Flows: Detailed user journey mapping and information architecture.',
+        tools: ['Figma', 'Figma Make', 'FigJam'],
+      },
+      {
+        icon: '🗣️',
+        title: 'Communication',
+        description: 'Presentations: Translating design decisions into business arguments for stakeholders, focusing on metrics and user problem resolution. Kick-offs: Leading initial alignment meetings to define scope, business objectives and technical expectations. Dynamics: Facilitating co-creation workshops and brainstorming sessions. Design Critiques: Promoting a culture of constructive feedback.',
+        tools: ['Slack', 'Jira', 'Miro', 'ChatGPT', 'Gemini'],
+      },
+      {
+        icon: '🔍',
+        title: 'Research',
+        description: 'Usability Testing: Planning and executing moderated and unmoderated tests to identify friction points and validate solution hypotheses. Quali and Quanti Research: Application of mixed methods (interviews, forms, data analysis) to understand user behavior. Recruitment: Definition of key user profiles and management of the recruitment process. Research Plan: Structuring investigation schedules and methodologies.',
+        tools: ['Maze', 'Miro', 'ChatGPT', 'Claude Code', 'Gemini'],
+      },
+    ],
+  },
+  works: {
+    label: 'Projects',
+    title: 'RECENT PROJECTS',
+    moreBtn: 'More projects',
+    lessBtn: 'See less',
+    projectCta: 'View project',
+    projects: [
+      {
+        client: 'MERCADO PAGO - Desktop & mobile',
+        title: 'PRODUCT CATALOG',
+        description: 'The Mercado Pago product catalog is a central tool of the Management Software that allows merchants to register, organize and manage the inventory of their items',
+        image: 'https://www.figma.com/api/mcp/asset/9041fff6-0d2e-431d-b610-ae60050cdf9e',
+        ctaLink: '/en/projetos/catalogo-de-produtos',
+      },
+      {
+        client: 'MERCADO PAGO - Desktop',
+        title: 'INVOICE ISSUER',
+        description: 'The tool allows merchants to issue, print, download and send invoices (such as NFe and NFCe) directly through the web platform or Smart terminals',
+        image: 'https://www.figma.com/api/mcp/asset/524a3ef7-ccf4-4f92-b415-f48fdf5fb80d',
+        ctaLink: '/en/projetos/emissor-de-notas-fiscais',
+      },
+      {
+        client: 'MERCADO PAGO - Desktop & Smart POS',
+        title: 'POINT OF SALE',
+        description: 'The Mercado Pago POS is a Management Software feature focused on agile sales registration and payment finalization in the merchant\'s daily routine',
+        image: 'https://www.figma.com/api/mcp/asset/4046ed2c-05fc-4223-8b69-4cb1b0e25ef1',
+        ctaLink: '/en/projetos/frente-de-caixa',
+      },
+    ],
+    extraProjects: [
+      {
+        client: 'BANCO BMG - Mobile',
+        title: 'DIGITAL WITHDRAWAL',
+        description: 'Banco Bmg\'s digital account offers the withdrawal feature through Banco24horas and Saque Pague ATM networks, but to make a withdrawal the customer needs to use their debit or credit card',
+        embedUrl: 'https://www.behance.net/embed/project/122787357?ilo0=1',
+        ctaLink: 'https://www.behance.net/gallery/122787357/Saque-digital',
+      },
+      {
+        client: 'BANCO BMG - Mobile',
+        title: 'MOBILE TOP-UP',
+        description: 'Offer a mobile top-up service in an easy, simple and fast way, increasing satisfaction for digital account customers',
+        embedUrl: 'https://www.behance.net/embed/project/122719481?ilo0=1',
+        ctaLink: 'https://www.behance.net/gallery/122719481/Recarga-de-celular',
+      },
+    ],
+  },
+  langButtons: { pt: 'Português', es: 'Spanish', en: 'English' },
+}
