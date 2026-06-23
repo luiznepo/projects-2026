@@ -12,8 +12,7 @@ export function Hero({ content }: HeroProps) {
   return (
     <section
       id="home"
-      className="min-h-screen bg-white flex overflow-hidden"
-      style={{ minHeight: '960px' }}
+      className="min-h-screen lg:min-h-[960px] bg-white flex overflow-hidden"
     >
       {/* Left: text content */}
       <div className="flex-1 flex items-center pl-[60px] lg:pl-[120px] pr-8 z-10 relative">
@@ -39,7 +38,7 @@ export function Hero({ content }: HeroProps) {
                 style={{
                   fontFamily: 'var(--font-poppins), "Poppins", sans-serif',
                   fontWeight: 500,
-                  fontSize: 'clamp(48px, 6vw, 102px)',
+                  fontSize: 'clamp(36px, 7vw, 102px)',
                   lineHeight: 1.05,
                   color: '#141313',
                   letterSpacing: '-0.02em',
@@ -55,8 +54,8 @@ export function Hero({ content }: HeroProps) {
                 style={{
                   fontFamily: 'var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif',
                   fontWeight: 500,
-                  fontSize: '32px',
-                  lineHeight: '40px',
+                  fontSize: 'clamp(18px, 4vw, 32px)',
+                  lineHeight: '1.4',
                   color: '#141313',
                   marginTop: '16px',
                 }}

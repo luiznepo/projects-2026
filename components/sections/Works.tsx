@@ -14,7 +14,7 @@ const IBM = 'var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif'
 function ProjectMedia({ project }: { project: Project }) {
   if (project.embedUrl) {
     return (
-      <div className="flex-1 flex items-center justify-center min-w-0">
+      <div className="w-full lg:flex-1 flex items-center justify-center min-w-0">
         <iframe
           src={project.embedUrl}
           height="316"
@@ -29,7 +29,7 @@ function ProjectMedia({ project }: { project: Project }) {
   }
 
   return (
-    <div className="flex-1 flex items-center justify-center min-w-0">
+    <div className="w-full lg:flex-1 flex items-center justify-center min-w-0">
       <img
         src={project.image}
         alt={project.title}
@@ -62,9 +62,9 @@ function ProjectCard({
       transition={{ duration: 0.5, delay: index * 0.08 }}
       className="flex items-center justify-center w-full"
     >
-      <div className="flex gap-[30px] items-start w-full">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-[30px] items-start w-full">
         {/* Left: text column */}
-        <div className="flex-1 flex flex-col gap-[24px] items-start justify-center min-w-0">
+        <div className="w-full lg:flex-1 flex flex-col gap-[24px] items-start justify-center min-w-0">
           {/* Client + title */}
           <div className="flex flex-col gap-[16px] w-full">
             <p
@@ -83,8 +83,8 @@ function ProjectCard({
               style={{
                 fontFamily: IBM,
                 fontWeight: 700,
-                fontSize: '40px',
-                lineHeight: '48px',
+                fontSize: 'clamp(24px, 4vw, 40px)',
+                lineHeight: '1.2',
                 color: '#141313',
                 textTransform: 'uppercase',
               }}
@@ -98,10 +98,9 @@ function ProjectCard({
             style={{
               fontFamily: IBM,
               fontWeight: 400,
-              fontSize: '18px',
+              fontSize: '17px',
               lineHeight: '24px',
               color: '#141313',
-              maxWidth: '575px',
             }}
           >
             {project.description}
@@ -152,7 +151,7 @@ export function Works({ content }: WorksProps) {
   return (
     <section
       id="works"
-      className="bg-white px-[120px] py-[56px]"
+      className="bg-white px-6 lg:px-[120px] py-[40px] lg:py-[56px]"
     >
       {/* Title */}
       <motion.div
@@ -160,7 +159,7 @@ export function Works({ content }: WorksProps) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.6 }}
-        className="flex flex-col gap-[16px] mb-[56px]"
+        className="flex flex-col gap-[16px] mb-[40px] lg:mb-[56px]"
       >
         <p
           style={{
@@ -178,8 +177,8 @@ export function Works({ content }: WorksProps) {
           style={{
             fontFamily: IBM,
             fontWeight: 700,
-            fontSize: '48px',
-            lineHeight: '56px',
+            fontSize: 'clamp(28px, 5vw, 48px)',
+            lineHeight: '1.2',
             color: '#141313',
             textTransform: 'uppercase',
           }}
@@ -189,9 +188,9 @@ export function Works({ content }: WorksProps) {
       </motion.div>
 
       {/* Projects */}
-      <div className="flex flex-col gap-[80px] items-center w-full">
+      <div className="flex flex-col gap-[60px] lg:gap-[80px] items-center w-full">
         {allProjects.map((project, i) => (
-          <div key={i} className="w-full flex flex-col gap-[80px]">
+          <div key={i} className="w-full flex flex-col gap-[60px] lg:gap-[80px]">
             <ProjectCard project={project} index={i} projectCta={content.projectCta} />
             {/* Divider — between main projects */}
             {i < allProjects.length - 1 && (
@@ -209,13 +208,13 @@ export function Works({ content }: WorksProps) {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.5 }}
-              className="w-full flex flex-col gap-[80px] overflow-hidden"
+              className="w-full flex flex-col gap-[60px] lg:gap-[80px] overflow-hidden"
             >
               {/* Divider before extra projects */}
               <div className="w-full h-px bg-[#141313]" />
 
               {extraProjects.map((project, i) => (
-                <div key={i} className="w-full flex flex-col gap-[80px]">
+                <div key={i} className="w-full flex flex-col gap-[60px] lg:gap-[80px]">
                   <ProjectCard
                     project={project}
                     index={i}

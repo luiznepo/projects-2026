@@ -214,7 +214,7 @@ export default function EmissorDeNotasFiscaisPage() {
     <div style={{ backgroundColor: '#fff', fontFamily: IBM }}>
 
       {/* BACK */}
-      <div style={{ padding: '32px 120px 0' }}>
+      <div className="px-6 lg:px-[120px]" style={{ paddingTop: '32px' }}>
         <button onClick={() => window.history.back()} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'none', border: 'none', cursor: 'pointer', fontFamily: IBM, fontWeight: 500, fontSize: '16px', color: '#141313', padding: '8px 0', opacity: 0.6 }}
           onMouseEnter={e => (e.currentTarget.style.opacity = '1')} onMouseLeave={e => (e.currentTarget.style.opacity = '0.6')}>
           {t.back}
@@ -222,40 +222,40 @@ export default function EmissorDeNotasFiscaisPage() {
       </div>
 
       {/* 1. HEADER */}
-      <motion.div {...fadeIn()} style={{ padding: '56px 120px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <motion.div {...fadeIn()} className="px-6 lg:px-[120px]" style={{ paddingTop: '40px', paddingBottom: '40px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <p style={{ fontFamily: IBM, fontWeight: 600, fontStyle: 'italic', fontSize: '18px', lineHeight: '24px', color: '#141313' }}>{t.headerLabel}</p>
-        <h1 style={{ fontFamily: IBM, fontWeight: 700, fontSize: '48px', lineHeight: '56px', color: '#141313', textTransform: 'uppercase' }}>{t.headerTitle}</h1>
+        <h1 style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(28px, 6vw, 48px)', lineHeight: '1.2', color: '#141313', textTransform: 'uppercase' }}>{t.headerTitle}</h1>
       </motion.div>
 
       {/* 2. CASE */}
-      <motion.div {...fadeIn(0.05)} style={{ padding: '0 120px 56px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '56px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
         <SectionTitle>{t.caseTitle}</SectionTitle>
         <SectionLabel>{t.caseLabel}</SectionLabel>
-        <div style={{ display: 'flex', gap: '40px' }}>
-          <p style={{ flex: 1, fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.contextoLabel}</strong>{t.contexto}</p>
-          <p style={{ flex: 1, fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.valorLabel}</strong>{t.valor}</p>
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-[40px]">
+          <p style={{ flex: 1, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.contextoLabel}</strong>{t.contexto}</p>
+          <p style={{ flex: 1, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.valorLabel}</strong>{t.valor}</p>
         </div>
-        <div style={{ display: 'flex', gap: '40px' }}>
-          <p style={{ flex: 1, fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.solucaoLabel}</strong>{t.solucao}</p>
-          <p style={{ flex: 1, fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.impactoLabel}</strong>{t.impacto}</p>
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-[40px]">
+          <p style={{ flex: 1, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.solucaoLabel}</strong>{t.solucao}</p>
+          <p style={{ flex: 1, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.impactoLabel}</strong>{t.impacto}</p>
         </div>
       </motion.div>
 
       {/* 3. PERFIL */}
-      <motion.div {...fadeIn(0.05)} style={{ padding: '0 120px 56px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '56px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <SectionTitle>{t.perfilTitle}</SectionTitle>
         <SectionLabel>{t.perfilLabel}</SectionLabel>
-        <div style={{ display: 'flex', gap: '100px', alignItems: 'flex-start' }}>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[100px] items-start">
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '40px' }}>
-            <p style={{ fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.segmentoLabel}</strong>{t.segmento}</p>
+            <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.segmentoLabel}</strong>{t.segmento}</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <SectionLabel>{t.doresLabel}</SectionLabel>
-              <ul style={{ fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '24px', display: 'flex', flexDirection: 'column', gap: '12px', listStyleType: 'disc' }}>
+              <ul style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '24px', display: 'flex', flexDirection: 'column', gap: '12px', listStyleType: 'disc' }}>
                 {t.dores.map((d, i) => <li key={i}><strong>{d.bold}</strong>{d.text}</li>)}
               </ul>
             </div>
           </div>
-          <div style={{ width: '540px', flexShrink: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div className="w-full lg:w-[540px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.entradaLabel}</SectionLabel>
             <div style={{ borderRadius: '11px', overflow: 'hidden' }}>
               <img src={imgVendas} alt="Sales list" style={{ width: '100%', height: 'auto', display: 'block' }} />
@@ -265,27 +265,27 @@ export default function EmissorDeNotasFiscaisPage() {
       </motion.div>
 
       {/* 4. SOLUÇÃO */}
-      <motion.div {...fadeIn(0.05)} style={{ padding: '0 120px 56px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '56px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
         <SectionTitle>{t.solTitle}</SectionTitle>
         <SectionLabel>{t.solLabel}</SectionLabel>
-        <p style={{ fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.solText1}</p>
-        <p style={{ fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.solText2}</p>
+        <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.solText1}</p>
+        <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.solText2}</p>
       </motion.div>
 
       {/* 5. FLUXO */}
-      <motion.div {...fadeIn(0.05)} style={{ padding: '0 120px 56px', display: 'flex', flexDirection: 'column', gap: '40px' }}>
+      <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '56px', display: 'flex', flexDirection: 'column', gap: '40px' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <SectionTitle>{t.fluxoTitle}</SectionTitle>
           <SectionLabel>{t.fluxoLabel}</SectionLabel>
         </div>
 
         {/* Step 1 */}
-        <div style={{ display: 'flex', gap: '90px', alignItems: 'flex-start' }}>
-          <div style={{ width: '677px', flexShrink: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step1Title}</p>
-            <p style={{ fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step1Text}</p>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
+          <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step1Title}</p>
+            <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step1Text}</p>
           </div>
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.bifLabel}</SectionLabel>
             <div style={{ position: 'relative', width: '100%', maxWidth: '541px' }}>
               <img src={imgBifurcador} alt="Invoice type selection" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '8px' }} />
@@ -298,12 +298,12 @@ export default function EmissorDeNotasFiscaisPage() {
         <Divider />
 
         {/* Step 2 */}
-        <div style={{ display: 'flex', gap: '90px', alignItems: 'flex-start' }}>
-          <div style={{ width: '677px', flexShrink: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step2Title}</p>
-            <p style={{ fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step2Text}</p>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
+          <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step2Title}</p>
+            <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step2Text}</p>
           </div>
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.dadosLabel}</SectionLabel>
             <div style={{ position: 'relative', width: '100%', maxWidth: '541px' }}>
               <img src={imgDados} alt="Customer data" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '8px' }} />
@@ -315,12 +315,12 @@ export default function EmissorDeNotasFiscaisPage() {
         <Divider />
 
         {/* Step 3 */}
-        <div style={{ display: 'flex', gap: '90px', alignItems: 'flex-start' }}>
-          <div style={{ width: '677px', flexShrink: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step3Title}</p>
-            <p style={{ fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step3Text}</p>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
+          <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step3Title}</p>
+            <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step3Text}</p>
           </div>
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.revisaLabel}</SectionLabel>
             <div style={{ position: 'relative', width: '100%', maxWidth: '541px' }}>
               <img src={imgRevisa} alt="Review" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '8px' }} />
@@ -333,9 +333,9 @@ export default function EmissorDeNotasFiscaisPage() {
 
         {/* Steps 4 & 5 */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step45Title}</p>
-          <p style={{ fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step45Text}</p>
-          <div style={{ display: 'flex', gap: '60px', marginTop: '8px' }}>
+          <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step45Title}</p>
+          <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step45Text}</p>
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-[60px] mt-2">
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', flex: 1 }}>
               <SectionLabel>{t.loadingLabel}</SectionLabel>
               <img src={imgLoading} alt="Loading" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '8px' }} />
@@ -349,26 +349,26 @@ export default function EmissorDeNotasFiscaisPage() {
       </motion.div>
 
       {/* 6. IMPACTO */}
-      <motion.div {...fadeIn(0.05)} style={{ padding: '0 120px 56px', display: 'flex', flexDirection: 'column', gap: '56px' }}>
+      <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '56px', display: 'flex', flexDirection: 'column', gap: '56px' }}>
         <SectionTitle>{t.impactoTitle}</SectionTitle>
-        <div style={{ display: 'flex', justifyContent: 'space-between', gap: '40px' }}>
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-[40px]">
           {t.impactoCards.map((m) => (
             <div key={m.title} style={{ flex: 1, borderBottom: '1px solid rgba(0,0,0,0.3)', display: 'flex', flexDirection: 'column', gap: '8px', paddingBottom: '16px' }}>
-              <p style={{ fontFamily: IBM, fontWeight: 400, fontSize: '32px', lineHeight: '1.2', color: 'rgba(0,0,0,0.9)' }}>{m.title}</p>
-              <p style={{ fontFamily: IBM, fontWeight: 400, fontSize: '20px', lineHeight: '1.3', color: 'rgba(0,0,0,0.55)' }}>{m.desc}</p>
+              <p style={{ fontFamily: IBM, fontWeight: 400, fontSize: 'clamp(20px, 4vw, 32px)', lineHeight: '1.2', color: 'rgba(0,0,0,0.9)' }}>{m.title}</p>
+              <p style={{ fontFamily: IBM, fontWeight: 400, fontSize: '18px', lineHeight: '1.3', color: 'rgba(0,0,0,0.55)' }}>{m.desc}</p>
             </div>
           ))}
         </div>
-        <p style={{ fontFamily: IBM, fontWeight: 600, fontSize: '48px', lineHeight: '64px', letterSpacing: '-1.92px', color: '#252537', maxWidth: '900px' }}>
+        <p style={{ fontFamily: IBM, fontWeight: 600, fontSize: 'clamp(26px, 6vw, 48px)', lineHeight: '1.3', letterSpacing: '-1.92px', color: '#252537', maxWidth: '900px' }}>
           {t.highlightPre}<span style={{ color: '#00a650' }}>{t.highlightGreen}</span>{t.highlightPost}
         </p>
         <Divider />
       </motion.div>
 
       {/* 7. DESIGNERS */}
-      <motion.div {...fadeIn(0.05)} style={{ padding: '0 120px 80px', display: 'flex', flexDirection: 'column', gap: '56px' }}>
+      <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '80px', display: 'flex', flexDirection: 'column', gap: '56px' }}>
         <SectionTitle>{t.designersTitle}</SectionTitle>
-        <div style={{ display: 'flex', gap: '60px', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
           {[
             { name: 'Luiz Felipe Nepomuceno', role: 'Sr. UX Designer', avatar: imgAvatar, figmaH: '191.3%', figmaTop: '-0.8%' },
             { name: 'Gabriel Gonzaga', role: 'Project Lead Designer', avatar: 'https://www.figma.com/api/mcp/asset/fa2c7df6-1ea8-442e-8ae7-6e24a0833f6b', figmaH: '100%', figmaTop: '0%' },
@@ -380,8 +380,8 @@ export default function EmissorDeNotasFiscaisPage() {
                 <img src={p.avatar} alt={p.name} style={{ position: 'absolute', width: '100%', height: p.figmaH, top: p.figmaTop, left: 0, maxWidth: 'none' }} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                <p style={{ fontFamily: IBM, fontWeight: 500, fontSize: '18px', color: '#101828', whiteSpace: 'nowrap' }}>{p.name}</p>
-                <p style={{ fontFamily: IBM, fontWeight: 400, fontSize: '16px', color: '#4a5565', whiteSpace: 'nowrap' }}>{p.role}</p>
+                <p style={{ fontFamily: IBM, fontWeight: 500, fontSize: '16px', color: '#101828' }}>{p.name}</p>
+                <p style={{ fontFamily: IBM, fontWeight: 400, fontSize: '14px', color: '#4a5565' }}>{p.role}</p>
               </div>
             </div>
           ))}

@@ -274,7 +274,7 @@ export default function CatalogoDeProdutosPage() {
     <div style={{ backgroundColor: '#fff', fontFamily: IBM }}>
 
       {/* BACK */}
-      <div style={{ padding: '32px 120px 0' }}>
+      <div className="px-6 lg:px-[120px]" style={{ paddingTop: '32px' }}>
         <button onClick={() => window.history.back()} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'none', border: 'none', cursor: 'pointer', fontFamily: IBM, fontWeight: 500, fontSize: '16px', color: '#141313', padding: '8px 0', opacity: 0.6 }}
           onMouseEnter={e => (e.currentTarget.style.opacity = '1')} onMouseLeave={e => (e.currentTarget.style.opacity = '0.6')}>
           {t.back}
@@ -282,44 +282,44 @@ export default function CatalogoDeProdutosPage() {
       </div>
 
       {/* 1. HEADER */}
-      <motion.div {...fadeIn()} style={{ padding: '56px 120px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <motion.div {...fadeIn()} className="px-6 lg:px-[120px]" style={{ paddingTop: '40px', paddingBottom: '40px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <p style={{ fontFamily: IBM, fontWeight: 600, fontStyle: 'italic', fontSize: '18px', lineHeight: '24px', color: '#141313' }}>{t.headerLabel}</p>
-        <h1 style={{ fontFamily: IBM, fontWeight: 700, fontSize: '48px', lineHeight: '56px', color: '#141313', textTransform: 'uppercase' }}>{t.headerTitle}</h1>
+        <h1 style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(28px, 6vw, 48px)', lineHeight: '1.2', color: '#141313', textTransform: 'uppercase' }}>{t.headerTitle}</h1>
       </motion.div>
 
       {/* 2. CASE */}
-      <motion.div {...fadeIn(0.05)} style={{ padding: '0 120px 56px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '56px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
         <SectionTitle>{t.caseTitle}</SectionTitle>
         <SectionLabel>{t.caseLabel}</SectionLabel>
-        <div style={{ display: 'flex', gap: '40px' }}>
-          <p style={{ flex: 1, fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.contextoLabel}</strong>{t.contexto}</p>
-          <p style={{ flex: 1, fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.objetivoLabel}</strong>{t.objetivo}</p>
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-[40px]">
+          <p style={{ flex: 1, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.contextoLabel}</strong>{t.contexto}</p>
+          <p style={{ flex: 1, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.objetivoLabel}</strong>{t.objetivo}</p>
         </div>
-        <div style={{ display: 'flex', gap: '40px' }}>
-          <p style={{ flex: 1, fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.solucaoLabel}</strong>{t.solucao}</p>
-          <p style={{ flex: 1, fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.papelLabel}</strong>{t.papel}</p>
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-[40px]">
+          <p style={{ flex: 1, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.solucaoLabel}</strong>{t.solucao}</p>
+          <p style={{ flex: 1, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.papelLabel}</strong>{t.papel}</p>
         </div>
       </motion.div>
 
       {/* 3. PROCESSO */}
-      <motion.div {...fadeIn(0.05)} style={{ padding: '0 120px 56px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '56px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <SectionTitle>{t.processoTitle}</SectionTitle>
         <SectionLabel>{t.processoLabel}</SectionLabel>
-        <div style={{ display: 'flex', gap: '100px', alignItems: 'flex-start' }}>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[100px] items-start">
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '40px' }}>
-            <p style={{ fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', whiteSpace: 'pre-line' }}>
+            <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', whiteSpace: 'pre-line' }}>
               <strong>{t.comoLabel}</strong>{t.como}
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <SectionLabel>{t.needsLabel}</SectionLabel>
-              <ul style={{ fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '24px', display: 'flex', flexDirection: 'column', gap: '12px', listStyleType: 'disc' }}>
+              <ul style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '24px', display: 'flex', flexDirection: 'column', gap: '12px', listStyleType: 'disc' }}>
                 {t.needs.map((n, i) => <li key={i}><strong>{n.bold}</strong>{n.text}</li>)}
               </ul>
             </div>
           </div>
-          <div style={{ width: '617px', flexShrink: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <div style={{ borderRadius: '20px', overflow: 'hidden', height: '376px' }}>
-              <img src={imgResearch} alt="Research" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+          <div className="w-full lg:w-[617px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <div style={{ borderRadius: '20px', overflow: 'hidden', maxHeight: '376px' }}>
+              <img src={imgResearch} alt="Research" style={{ width: '100%', height: 'auto', objectFit: 'cover', display: 'block' }} />
             </div>
             <a href="https://docs.google.com/presentation/d/1YY21q0LzSY6CtGngjre3puq2m7BH0gZG/edit?usp=sharing&ouid=101971509973607787710&rtpof=true&sd=true" target="_blank" rel="noreferrer"
               style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: 'rgba(196,211,252,0.16)', borderRadius: '5px', padding: '11px 16px 11px 12px', fontFamily: IBM, fontWeight: 600, fontSize: '14px', color: '#294ed6', textDecoration: 'underline', alignSelf: 'flex-start' }}>
@@ -330,22 +330,22 @@ export default function CatalogoDeProdutosPage() {
       </motion.div>
 
       {/* 4. FERRAMENTA */}
-      <motion.div {...fadeIn(0.05)} style={{ padding: '0 120px 56px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '56px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <SectionTitle>{t.ferramentaTitle}</SectionTitle>
         <SectionLabel>{t.ferramentaLabel}</SectionLabel>
-        <div style={{ display: 'flex', gap: '100px', alignItems: 'flex-start' }}>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[100px] items-start">
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '40px' }}>
-            <p style={{ fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.cenarioLabel}</strong>{t.cenario}</p>
+            <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.cenarioLabel}</strong>{t.cenario}</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.opTitle}</p>
-              <ol style={{ fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '28px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.opTitle}</p>
+              <ol style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '28px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 {t.ops.map((op, i) => <li key={i}>{op}</li>)}
               </ol>
             </div>
           </div>
-          <div style={{ width: '540px', flexShrink: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <div style={{ borderRadius: '11px', overflow: 'hidden', height: '353px' }}>
-              <img src={imgBefore1} alt="Before" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+          <div className="w-full lg:w-[540px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <div style={{ borderRadius: '11px', overflow: 'hidden', maxHeight: '353px' }}>
+              <img src={imgBefore1} alt="Before" style={{ width: '100%', height: 'auto', objectFit: 'cover', display: 'block' }} />
             </div>
             <div style={{ borderRadius: '10px', overflow: 'hidden', aspectRatio: '540/394' }}>
               <img src={imgBefore2} alt="Before list" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
@@ -355,50 +355,50 @@ export default function CatalogoDeProdutosPage() {
       </motion.div>
 
       {/* 5. REDESENHO */}
-      <motion.div {...fadeIn(0.05)} style={{ padding: '0 120px 56px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '56px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <SectionTitle>{t.redesenhoTitle}</SectionTitle>
         <SectionLabel>{t.redesenhoLabel}</SectionLabel>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
-          <ol style={{ fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '28px' }}>
+          <ol style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '28px' }}>
             <li>{t.step1}</li>
           </ol>
-          <div style={{ display: 'flex', gap: '217px' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', width: '540px' }}>
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-[217px]">
+            <div className="w-full lg:w-[540px]" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <SectionLabel>{t.layer1Add}</SectionLabel>
-              <img src={imgWireAdd} alt="Wireframe add" style={{ width: '100%', height: '356px', objectFit: 'contain', display: 'block' }} />
+              <img src={imgWireAdd} alt="Wireframe add" style={{ width: '100%', height: 'auto', maxHeight: '356px', objectFit: 'contain', display: 'block' }} />
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', width: '540px' }}>
+            <div className="w-full lg:w-[540px]" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <SectionLabel>{t.layer2List}</SectionLabel>
-              <img src={imgWireList} alt="Wireframe list" style={{ width: '100%', height: '356px', objectFit: 'cover', display: 'block' }} />
+              <img src={imgWireList} alt="Wireframe list" style={{ width: '100%', height: 'auto', maxHeight: '356px', objectFit: 'cover', display: 'block' }} />
             </div>
           </div>
-          <ol start={2} style={{ fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '28px' }}>
+          <ol start={2} style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '28px' }}>
             <li>{t.step2}</li>
           </ol>
-          <div style={{ display: 'flex', gap: '217px' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', width: '540px' }}>
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-[217px]">
+            <div className="w-full lg:w-[540px]" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <SectionLabel>{t.layer1Add}</SectionLabel>
-              <div style={{ overflow: 'hidden', height: '366px' }}>
-                <img src={imgMidAdd} alt="Mid-fi add" style={{ width: '100%', height: '115%', objectFit: 'cover', objectPosition: 'top', display: 'block' }} />
+              <div style={{ overflow: 'hidden', maxHeight: '366px' }}>
+                <img src={imgMidAdd} alt="Mid-fi add" style={{ width: '100%', height: 'auto', objectFit: 'cover', objectPosition: 'top', display: 'block' }} />
               </div>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', width: '540px' }}>
+            <div className="w-full lg:w-[540px]" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <SectionLabel>{t.layer2List}</SectionLabel>
-              <img src={imgMidList} alt="Mid-fi list" style={{ width: '100%', height: '363px', objectFit: 'cover', display: 'block' }} />
+              <img src={imgMidList} alt="Mid-fi list" style={{ width: '100%', height: 'auto', maxHeight: '363px', objectFit: 'cover', display: 'block' }} />
             </div>
           </div>
         </div>
       </motion.div>
 
       {/* 6. SOLUÇÃO FINAL */}
-      <motion.div {...fadeIn(0.05)} style={{ padding: '0 120px 56px', display: 'flex', flexDirection: 'column', gap: '56px' }}>
+      <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '56px', display: 'flex', flexDirection: 'column', gap: '56px' }}>
         <SectionTitle>{t.finalTitle}</SectionTitle>
 
         {/* Part A */}
-        <div style={{ display: 'flex', gap: '90px', alignItems: 'flex-start' }}>
-          <div style={{ width: '677px', flexShrink: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.melhorias}</p>
-            <ol style={{ fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '28px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
+          <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.melhorias}</p>
+            <ol style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '28px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {t.finalImprovementsA.map((item, i) => <li key={i}>{item}</li>)}
               <li>
                 {t.finalImprovementsALast}
@@ -408,7 +408,7 @@ export default function CatalogoDeProdutosPage() {
               </li>
             </ol>
           </div>
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.layer1Add}</SectionLabel>
             <div style={{ position: 'relative', width: '100%', maxWidth: '541px' }}>
               <img src={imgFinalAdd} alt="Final add" style={{ width: '100%', height: 'auto', display: 'block' }} />
@@ -423,14 +423,14 @@ export default function CatalogoDeProdutosPage() {
         <Divider />
 
         {/* Part B */}
-        <div style={{ display: 'flex', gap: '90px', alignItems: 'flex-start' }}>
-          <div style={{ width: '677px', flexShrink: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.melhorias}</p>
-            <ol style={{ fontSize: '18px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '28px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
+          <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.melhorias}</p>
+            <ol style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '28px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {t.finalImprovementsB.map((item, i) => <li key={i}>{item}</li>)}
             </ol>
           </div>
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.layer2List}</SectionLabel>
             <div style={{ position: 'relative', width: '100%', maxWidth: '536px' }}>
               <img src={imgFinalList} alt="Final list" style={{ width: '100%', height: 'auto', display: 'block' }} />
@@ -444,80 +444,82 @@ export default function CatalogoDeProdutosPage() {
       </motion.div>
 
       {/* 7. RESULTADOS */}
-      <motion.div {...fadeIn(0.05)} style={{ padding: '0 120px 56px', display: 'flex', flexDirection: 'column', gap: '56px' }}>
+      <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '56px', display: 'flex', flexDirection: 'column', gap: '56px' }}>
         <SectionTitle>{t.resultsTitle}</SectionTitle>
-        <div style={{ display: 'flex', justifyContent: 'space-between', gap: '40px' }}>
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-[40px]">
           {t.metrics.map((m) => (
             <div key={m.value} style={{ flex: 1, borderBottom: '1px solid rgba(0,0,0,0.3)', display: 'flex', flexDirection: 'column', gap: '20px', paddingBottom: '16px' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <p style={{ fontFamily: IBM, fontWeight: 400, fontSize: '32px', lineHeight: '1.2', color: 'rgba(0,0,0,0.9)' }}>{m.title}</p>
-                <p style={{ fontFamily: IBM, fontWeight: 400, fontSize: '20px', lineHeight: '1.3', color: 'rgba(0,0,0,0.55)' }}>{m.desc}</p>
+                <p style={{ fontFamily: IBM, fontWeight: 400, fontSize: 'clamp(18px, 4vw, 32px)', lineHeight: '1.2', color: 'rgba(0,0,0,0.9)' }}>{m.title}</p>
+                <p style={{ fontFamily: IBM, fontWeight: 400, fontSize: '18px', lineHeight: '1.3', color: 'rgba(0,0,0,0.55)' }}>{m.desc}</p>
               </div>
-              <p style={{ fontFamily: IBM, fontWeight: 400, fontSize: '100px', lineHeight: '1', color: '#29cc6a', whiteSpace: 'nowrap' }}>{m.value}</p>
+              <p style={{ fontFamily: IBM, fontWeight: 400, fontSize: 'clamp(48px, 12vw, 100px)', lineHeight: '1', color: '#29cc6a', whiteSpace: 'nowrap' }}>{m.value}</p>
             </div>
           ))}
         </div>
 
-        <div style={{ display: 'flex', gap: '38px', alignItems: 'center' }}>
-          {/* Chart 1 */}
-          <div style={{ width: '360px', height: '576px', flexShrink: 0, border: '1px solid rgba(0,0,0,0.1)', borderRadius: '8px', position: 'relative', padding: '36px 20px 80px' }}>
-            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '26px', color: 'rgba(0,0,0,0.9)', marginBottom: '24px' }}>Quant Seller</p>
-            <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center', gap: '40px', height: '280px' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <span style={{ fontFamily: IBM, fontSize: '20px', color: 'rgba(0,0,0,0.9)' }}>4k</span>
-                <div style={{ width: '66px', height: '98px', backgroundColor: '#3483fa' }} />
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <span style={{ fontFamily: IBM, fontSize: '16px', color: '#fff', backgroundColor: '#3483fa', padding: '2px 8px', borderRadius: '4px' }}>+5k</span>
-                <span style={{ fontFamily: IBM, fontSize: '20px', color: 'rgba(0,0,0,0.9)' }}>9k</span>
-                <div style={{ position: 'relative', width: '66px', height: '238px', backgroundColor: '#3483fa', display: 'flex', alignItems: 'flex-end' }}>
-                  <div style={{ width: '100%', height: '140px', backgroundColor: '#00a650' }} />
+        <div className="overflow-x-auto -mx-6 px-6 lg:mx-0 lg:px-0">
+          <div style={{ display: 'flex', gap: '38px', alignItems: 'center', minWidth: '720px' }}>
+            {/* Chart 1 */}
+            <div style={{ width: '360px', height: '576px', flexShrink: 0, border: '1px solid rgba(0,0,0,0.1)', borderRadius: '8px', position: 'relative', padding: '36px 20px 80px' }}>
+              <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '26px', color: 'rgba(0,0,0,0.9)', marginBottom: '24px' }}>Quant Seller</p>
+              <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center', gap: '40px', height: '280px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
+                  <span style={{ fontFamily: IBM, fontSize: '20px', color: 'rgba(0,0,0,0.9)' }}>4k</span>
+                  <div style={{ width: '66px', height: '98px', backgroundColor: '#3483fa' }} />
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
+                  <span style={{ fontFamily: IBM, fontSize: '16px', color: '#fff', backgroundColor: '#3483fa', padding: '2px 8px', borderRadius: '4px' }}>+5k</span>
+                  <span style={{ fontFamily: IBM, fontSize: '20px', color: 'rgba(0,0,0,0.9)' }}>9k</span>
+                  <div style={{ position: 'relative', width: '66px', height: '238px', backgroundColor: '#3483fa', display: 'flex', alignItems: 'flex-end' }}>
+                    <div style={{ width: '100%', height: '140px', backgroundColor: '#00a650' }} />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '60px', marginTop: '12px' }}>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ width: '80px', height: '4px', backgroundColor: '#3483fa', margin: '0 auto 4px' }} />
-                <p style={{ fontFamily: IBM, fontWeight: 600, fontSize: '14px', color: 'rgba(0,0,0,0.9)', lineHeight: '1.4' }}>14/04<br />{t.chartImplLabel}</p>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '60px', marginTop: '12px' }}>
+                <div style={{ textAlign: 'center' }}>
+                  <div style={{ width: '80px', height: '4px', backgroundColor: '#3483fa', margin: '0 auto 4px' }} />
+                  <p style={{ fontFamily: IBM, fontWeight: 600, fontSize: '14px', color: 'rgba(0,0,0,0.9)', lineHeight: '1.4' }}>14/04<br />{t.chartImplLabel}</p>
+                </div>
+                <p style={{ fontFamily: IBM, fontSize: '14px', color: 'rgba(0,0,0,0.9)', marginTop: '8px' }}>19/05</p>
               </div>
-              <p style={{ fontFamily: IBM, fontSize: '14px', color: 'rgba(0,0,0,0.9)', marginTop: '8px' }}>19/05</p>
             </div>
-          </div>
-          {/* Chart 2 */}
-          <div style={{ width: '360px', height: '576px', flexShrink: 0, border: '1px solid rgba(0,0,0,0.1)', borderRadius: '8px', position: 'relative', padding: '36px 20px 80px' }}>
-            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '26px', color: 'rgba(0,0,0,0.9)', marginBottom: '24px' }}>Quant Seller</p>
-            <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center', gap: '40px', height: '280px' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <span style={{ fontFamily: IBM, fontSize: '20px', color: 'rgba(0,0,0,0.9)' }}>2k</span>
-                <div style={{ width: '66px', height: '98px', backgroundColor: '#3483fa' }} />
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <span style={{ fontFamily: IBM, fontSize: '16px', color: '#fff', backgroundColor: '#3483fa', padding: '2px 8px', borderRadius: '4px' }}>+2k</span>
-                <span style={{ fontFamily: IBM, fontSize: '20px', color: 'rgba(0,0,0,0.9)' }}>4k</span>
-                <div style={{ position: 'relative', width: '66px', height: '238px', backgroundColor: '#3483fa', display: 'flex', alignItems: 'flex-end' }}>
-                  <div style={{ width: '100%', height: '140px', backgroundColor: '#00a650' }} />
+            {/* Chart 2 */}
+            <div style={{ width: '360px', height: '576px', flexShrink: 0, border: '1px solid rgba(0,0,0,0.1)', borderRadius: '8px', position: 'relative', padding: '36px 20px 80px' }}>
+              <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '26px', color: 'rgba(0,0,0,0.9)', marginBottom: '24px' }}>Quant Seller</p>
+              <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center', gap: '40px', height: '280px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
+                  <span style={{ fontFamily: IBM, fontSize: '20px', color: 'rgba(0,0,0,0.9)' }}>2k</span>
+                  <div style={{ width: '66px', height: '98px', backgroundColor: '#3483fa' }} />
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
+                  <span style={{ fontFamily: IBM, fontSize: '16px', color: '#fff', backgroundColor: '#3483fa', padding: '2px 8px', borderRadius: '4px' }}>+2k</span>
+                  <span style={{ fontFamily: IBM, fontSize: '20px', color: 'rgba(0,0,0,0.9)' }}>4k</span>
+                  <div style={{ position: 'relative', width: '66px', height: '238px', backgroundColor: '#3483fa', display: 'flex', alignItems: 'flex-end' }}>
+                    <div style={{ width: '100%', height: '140px', backgroundColor: '#00a650' }} />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '60px', marginTop: '12px' }}>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ width: '80px', height: '4px', backgroundColor: '#3483fa', margin: '0 auto 4px' }} />
-                <p style={{ fontFamily: IBM, fontWeight: 600, fontSize: '14px', color: 'rgba(0,0,0,0.9)', lineHeight: '1.4' }}>14/04<br />{t.chartImplLabel}</p>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '60px', marginTop: '12px' }}>
+                <div style={{ textAlign: 'center' }}>
+                  <div style={{ width: '80px', height: '4px', backgroundColor: '#3483fa', margin: '0 auto 4px' }} />
+                  <p style={{ fontFamily: IBM, fontWeight: 600, fontSize: '14px', color: 'rgba(0,0,0,0.9)', lineHeight: '1.4' }}>14/04<br />{t.chartImplLabel}</p>
+                </div>
+                <p style={{ fontFamily: IBM, fontSize: '14px', color: 'rgba(0,0,0,0.9)', marginTop: '8px' }}>19/05</p>
               </div>
-              <p style={{ fontFamily: IBM, fontSize: '14px', color: 'rgba(0,0,0,0.9)', marginTop: '8px' }}>19/05</p>
             </div>
+            <p style={{ flex: 1, fontFamily: IBM, fontWeight: 600, fontSize: 'clamp(24px, 4vw, 48px)', lineHeight: '1.3', letterSpacing: '-1.92px', color: '#252537', minWidth: '200px' }}>
+              {t.highlight}<span style={{ color: '#00a650' }}>{t.highlightGreen}</span>
+            </p>
           </div>
-          <p style={{ flex: 1, fontFamily: IBM, fontWeight: 600, fontSize: '48px', lineHeight: '64px', letterSpacing: '-1.92px', color: '#252537' }}>
-            {t.highlight}<span style={{ color: '#00a650' }}>{t.highlightGreen}</span>
-          </p>
         </div>
         <Divider />
       </motion.div>
 
       {/* 8. DESIGNERS */}
-      <motion.div {...fadeIn(0.05)} style={{ padding: '0 120px 80px', display: 'flex', flexDirection: 'column', gap: '56px' }}>
+      <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '80px', display: 'flex', flexDirection: 'column', gap: '56px' }}>
         <SectionTitle>{t.designersTitle}</SectionTitle>
-        <div style={{ display: 'flex', gap: '60px', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
           {[
             { name: 'Luiz Felipe Nepomuceno', role: 'Sr. UX Designer', avatar: imgAvatar, figmaH: '191.3%', figmaTop: '-0.8%' },
             { name: 'Gabriel Gonzaga', role: 'Project Lead Designer', avatar: imgAvatar1, figmaH: '100%', figmaTop: '0%' },
@@ -529,8 +531,8 @@ export default function CatalogoDeProdutosPage() {
                 <img src={p.avatar} alt={p.name} style={{ position: 'absolute', width: '100%', height: p.figmaH, top: p.figmaTop, left: 0, maxWidth: 'none', objectFit: p.figmaH === '100%' ? 'cover' : undefined }} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                <p style={{ fontFamily: IBM, fontWeight: 500, fontSize: '18px', color: '#101828', whiteSpace: 'nowrap' }}>{p.name}</p>
-                <p style={{ fontFamily: IBM, fontWeight: 400, fontSize: '16px', color: '#4a5565', whiteSpace: 'nowrap' }}>{p.role}</p>
+                <p style={{ fontFamily: IBM, fontWeight: 500, fontSize: '16px', color: '#101828' }}>{p.name}</p>
+                <p style={{ fontFamily: IBM, fontWeight: 400, fontSize: '14px', color: '#4a5565' }}>{p.role}</p>
               </div>
             </div>
           ))}
