@@ -62,11 +62,11 @@ function ProjectCard({
       transition={{ duration: 0.5, delay: index * 0.08 }}
       className="flex items-center justify-center w-full"
     >
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-[30px] items-start w-full">
-        {/* Left: text column */}
-        <div className="w-full lg:flex-1 flex flex-col gap-[24px] items-start justify-center min-w-0">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-[30px] items-center lg:items-start w-full">
+        {/* Text column */}
+        <div className="w-full lg:flex-1 flex flex-col gap-[20px] lg:gap-[24px] items-center lg:items-start justify-center min-w-0 text-center lg:text-left">
           {/* Client + title */}
-          <div className="flex flex-col gap-[16px] w-full">
+          <div className="flex flex-col gap-[12px] lg:gap-[16px] w-full">
             <p
               style={{
                 fontFamily: IBM,
@@ -91,6 +91,11 @@ function ProjectCard({
             >
               {project.title}
             </h3>
+          </div>
+
+          {/* Media — mobile only (between title and description) */}
+          <div className="w-full lg:hidden">
+            <ProjectMedia project={project} />
           </div>
 
           {/* Description */}
@@ -135,8 +140,10 @@ function ProjectCard({
           </motion.a>
         </div>
 
-        {/* Right: media (image or iframe) */}
-        <ProjectMedia project={project} />
+        {/* Media — desktop only (right column) */}
+        <div className="hidden lg:flex w-full lg:flex-1 items-center justify-center min-w-0">
+          <ProjectMedia project={project} />
+        </div>
       </div>
     </motion.div>
   )
@@ -159,7 +166,7 @@ export function Works({ content }: WorksProps) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.6 }}
-        className="flex flex-col gap-[16px] mb-[40px] lg:mb-[56px]"
+        className="flex flex-col gap-[16px] mb-[40px] lg:mb-[56px] text-center lg:text-left"
       >
         <p
           style={{

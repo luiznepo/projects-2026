@@ -12,10 +12,10 @@ export function Hero({ content }: HeroProps) {
   return (
     <section
       id="home"
-      className="min-h-screen lg:min-h-[960px] bg-white flex overflow-hidden"
+      className="bg-white overflow-hidden flex flex-col lg:flex-row lg:min-h-[960px]"
     >
-      {/* Left: text content */}
-      <div className="flex-1 flex items-center pl-[60px] lg:pl-[120px] pr-8 z-10 relative">
+      {/* Text content */}
+      <div className="flex-1 flex lg:items-center pl-[60px] lg:pl-[120px] pr-8 z-10 relative pt-10 pb-8 lg:pt-0 lg:pb-0">
         {/* Decorative gradient blob */}
         <div
           className="absolute top-[60px] left-[80px] w-[246px] h-[177px] pointer-events-none"
@@ -29,9 +29,9 @@ export function Hero({ content }: HeroProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-          className="flex flex-col gap-16 max-w-[545px]"
+          className="flex flex-col gap-10 lg:gap-16 max-w-[545px]"
         >
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col gap-8 lg:gap-12">
             {/* Name + role */}
             <div className="flex flex-col gap-0">
               <h1
@@ -90,24 +90,23 @@ export function Hero({ content }: HeroProps) {
         </motion.div>
       </div>
 
-      {/* Right: photo */}
+      {/* Photo */}
       <motion.div
         initial={{ opacity: 0, x: 40 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.9, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
-        className="relative flex-shrink-0 hidden md:block"
-        style={{ width: '55%', maxWidth: '864px', minHeight: '960px' }}
+        className="relative flex-shrink-0 h-[380px] w-full lg:h-auto lg:w-[55%] lg:max-w-[864px] lg:min-h-[960px]"
       >
-        {/* Gradient overlays (decorative vectors from Figma) */}
+        {/* Gradient overlays — desktop only */}
         <div
-          className="absolute bottom-0 right-0 w-[390px] h-[272px] pointer-events-none z-10"
+          className="hidden lg:block absolute bottom-0 right-0 w-[390px] h-[272px] pointer-events-none z-10"
           style={{
             background: 'linear-gradient(135deg, rgba(255,177,71,0.6) 0%, rgba(255,108,99,0.4) 100%)',
             filter: 'blur(60px)',
           }}
         />
         <div
-          className="absolute top-0 left-0 w-[446px] h-[320px] pointer-events-none z-10"
+          className="hidden lg:block absolute top-0 left-0 w-[446px] h-[320px] pointer-events-none z-10"
           style={{
             background: 'linear-gradient(135deg, rgba(184,106,223,0.4) 0%, rgba(255,108,99,0.3) 100%)',
             filter: 'blur(60px)',
@@ -120,14 +119,14 @@ export function Hero({ content }: HeroProps) {
           fill
           className="object-cover object-top"
           priority
-          sizes="864px"
+          sizes="(max-width: 1024px) 100vw, 864px"
         />
 
-        {/* Star decorations */}
-        <div className="absolute top-[136px] right-[220px] z-20">
+        {/* Star decorations — desktop only */}
+        <div className="hidden lg:block absolute top-[136px] right-[220px] z-20">
           <div className="w-7 h-7 bg-white" style={{ clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' }} />
         </div>
-        <div className="absolute bottom-[663px] left-[61px] z-20">
+        <div className="hidden lg:block absolute bottom-[663px] left-[61px] z-20">
           <div className="w-[22px] h-[22px] bg-white" style={{ clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' }} />
         </div>
       </motion.div>

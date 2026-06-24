@@ -15,7 +15,7 @@ export function About({ content, experience }: AboutProps) {
   return (
     <section id="about">
       {/* ── Part 1: Welcome ── */}
-      <div className="bg-white px-6 lg:px-[120px] pt-[32px] lg:pt-[60px] pb-0">
+      <div className="bg-white px-6 lg:px-[120px] pt-[32px] lg:pt-[60px] pb-6">
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
