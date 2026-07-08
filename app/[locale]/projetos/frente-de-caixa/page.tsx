@@ -365,7 +365,7 @@ export default function FrenteDeCaixaPage() {
         <SectionTitle>{t.designersTitle}</SectionTitle>
         <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
           {[
-            { name: 'Luiz Felipe Nepomuceno', role: 'Sr. UX Designer', avatar: imgAvatar, figmaH: '191.3%', figmaTop: '-0.8%' },
+            { name: 'Luiz Felipe Nepomuceno', role: 'Sr. UX Designer', avatar: imgAvatar, figmaH: '100%', figmaTop: '0%' },
             { name: 'Gabriel Gonzaga', role: 'Project Lead Designer', avatar: '/images/Gabriel.png', figmaH: '100%', figmaTop: '0%' },
             { name: 'Melissa Salvatti', role: 'Semi Sr. UX Writer', avatar: '/images/Melissa%20Salvatti.png', figmaH: '100%', figmaTop: '0%' },
           ].map((p) => (

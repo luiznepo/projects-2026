@@ -518,7 +518,7 @@ export default function CatalogoDeProdutosPage() {
         <SectionTitle>{t.designersTitle}</SectionTitle>
         <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
           {[
-            { name: 'Luiz Felipe Nepomuceno', role: 'Sr. UX Designer', avatar: imgAvatar, figmaH: '191.3%', figmaTop: '-0.8%' },
+            { name: 'Luiz Felipe Nepomuceno', role: 'Sr. UX Designer', avatar: imgAvatar, figmaH: '100%', figmaTop: '0%' },
             { name: 'Gabriel Gonzaga', role: 'Project Lead Designer', avatar: imgAvatar1, figmaH: '100%', figmaTop: '0%' },
             { name: 'Luiza Alexander', role: 'Semi Sr. UX Designer', avatar: imgAvatar2, figmaH: '100%', figmaTop: '0%' },
             { name: 'Soraia Shell', role: 'Semi Sr. UX Writer', avatar: imgAvatar3, figmaH: '100%', figmaTop: '0%' },
