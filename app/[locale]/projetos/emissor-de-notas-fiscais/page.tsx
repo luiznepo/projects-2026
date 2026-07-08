@@ -12,7 +12,7 @@ const imgDados      = '/images/emissor/dados%20do%20cliente_default.png'
 const imgRevisa     = '/images/emissor/revisayconfirma.png'
 const imgLoading    = '/images/emissor/loading.png'
 const imgCongrats   = '/images/emissor/congrats.png'
-const imgAvatar     = 'https://www.figma.com/api/mcp/asset/f0dd279c-20a8-4993-8403-8680b503e56a'
+const imgAvatar     = '/images/about-photo.png'
 
 // ─── Content ─────────────────────────────────────────────────────────────────
 const content = {
@@ -371,8 +371,8 @@ export default function EmissorDeNotasFiscaisPage() {
         <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
           {[
             { name: 'Luiz Felipe Nepomuceno', role: 'Sr. UX Designer', avatar: imgAvatar, figmaH: '191.3%', figmaTop: '-0.8%' },
-            { name: 'Gabriel Gonzaga', role: 'Project Lead Designer', avatar: 'https://www.figma.com/api/mcp/asset/fa2c7df6-1ea8-442e-8ae7-6e24a0833f6b', figmaH: '100%', figmaTop: '0%' },
-            { name: 'Soraia Shell', role: 'Semi Sr. UX Writer', avatar: 'https://www.figma.com/api/mcp/asset/599e98ee-5106-4387-863f-858826dfb15a', figmaH: '100%', figmaTop: '0%' },
+            { name: 'Gabriel Gonzaga', role: 'Project Lead Designer', avatar: '/images/Gabriel.png', figmaH: '100%', figmaTop: '0%' },
+            { name: 'Soraia Shell', role: 'Semi Sr. UX Writer', avatar: '/images/Soraia.png', figmaH: '100%', figmaTop: '0%' },
             { name: 'Camila Ramos', role: 'Semi Sr. UX Designer', avatar: '/images/Camila%20Ramos.png', figmaH: '100%', figmaTop: '0%' },
           ].map((p) => (
             <div key={p.name} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>

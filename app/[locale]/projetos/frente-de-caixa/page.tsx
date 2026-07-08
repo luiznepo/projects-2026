@@ -14,7 +14,7 @@ const imgSmartEmpty  = '/images/frente/frente%201.png'
 const imgSmartFull   = '/images/frente/frente%202.png'
 const imgSmartCart   = '/images/frente/carrito-estoque.png'
 const imgSmartDone   = '/images/frente/congrats.png'
-const imgAvatar      = 'https://www.figma.com/api/mcp/asset/f0dd279c-20a8-4993-8403-8680b503e56a'
+const imgAvatar      = '/images/about-photo.png'
 
 // ─── Content ─────────────────────────────────────────────────────────────────
 const content = {
@@ -366,7 +366,7 @@ export default function FrenteDeCaixaPage() {
         <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
           {[
             { name: 'Luiz Felipe Nepomuceno', role: 'Sr. UX Designer', avatar: imgAvatar, figmaH: '191.3%', figmaTop: '-0.8%' },
-            { name: 'Gabriel Gonzaga', role: 'Project Lead Designer', avatar: 'https://www.figma.com/api/mcp/asset/fa2c7df6-1ea8-442e-8ae7-6e24a0833f6b', figmaH: '100%', figmaTop: '0%' },
+            { name: 'Gabriel Gonzaga', role: 'Project Lead Designer', avatar: '/images/Gabriel.png', figmaH: '100%', figmaTop: '0%' },
             { name: 'Melissa Salvatti', role: 'Semi Sr. UX Writer', avatar: '/images/Melissa%20Salvatti.png', figmaH: '100%', figmaTop: '0%' },
           ].map((p) => (
             <div key={p.name} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
