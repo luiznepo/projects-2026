@@ -15,7 +15,7 @@ const imgMidAdd    = '/images/Mid-fi%20Add.png'
 const imgMidList   = '/images/Mid-fi%20list.png'
 const imgFinalAdd  = '/images/Final%20Add.png'
 const imgFinalList = '/images/Final%20Add%20list.png'
-const imgAvatar    = '/images/about-photo.png'
+const imgAvatar    = '/images/luiz.png'
 const imgAvatar1   = '/images/Gabriel.png'
 const imgAvatar2   = '/images/Luiza.png'
 const imgAvatar3   = '/images/Soraia.png'
@@ -344,11 +344,8 @@ export default function CatalogoDeProdutosPage() {
             </div>
           </div>
           <div className="w-full lg:w-[540px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <div style={{ borderRadius: '11px', overflow: 'hidden', maxHeight: '353px' }}>
-              <img src={imgBefore1} alt="Before" style={{ width: '100%', height: 'auto', objectFit: 'cover', display: 'block' }} />
-            </div>
-            <div style={{ borderRadius: '10px', overflow: 'hidden', aspectRatio: '540/394' }}>
-              <img src={imgBefore2} alt="Before list" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+            <div style={{ borderRadius: '11px', overflow: 'hidden' }}>
+              <img src={imgBefore1} alt="Before" style={{ width: '100%', height: 'auto', display: 'block' }} />
             </div>
           </div>
         </div>

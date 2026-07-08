@@ -14,7 +14,7 @@ const imgSmartEmpty  = '/images/frente/frente%201.png'
 const imgSmartFull   = '/images/frente/frente%202.png'
 const imgSmartCart   = '/images/frente/carrito-estoque.png'
 const imgSmartDone   = '/images/frente/congrats.png'
-const imgAvatar      = '/images/about-photo.png'
+const imgAvatar      = '/images/luiz.png'
 
 // ─── Content ─────────────────────────────────────────────────────────────────
 const content = {

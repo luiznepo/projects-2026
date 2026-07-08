@@ -12,7 +12,7 @@ const imgDados      = '/images/emissor/dados%20do%20cliente_default.png'
 const imgRevisa     = '/images/emissor/revisayconfirma.png'
 const imgLoading    = '/images/emissor/loading.png'
 const imgCongrats   = '/images/emissor/congrats.png'
-const imgAvatar     = '/images/about-photo.png'
+const imgAvatar     = '/images/luiz.png'
 
 // ─── Content ─────────────────────────────────────────────────────────────────
 const content = {
