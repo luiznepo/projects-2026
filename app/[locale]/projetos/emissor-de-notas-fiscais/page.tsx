@@ -192,10 +192,10 @@ function Badge({ n, style }: { n: number; style?: React.CSSProperties }) {
   )
 }
 function SectionLabel({ children }: { children: React.ReactNode }) {
-  return <p style={{ fontFamily: IBM, fontWeight: 600, fontStyle: 'italic', fontSize: '18px', lineHeight: '24px', color: '#141313' }}>{children}</p>
+  return <p style={{ fontFamily: IBM, fontWeight: 600, fontStyle: 'italic', fontSize: 'clamp(15px, 4vw, 18px)', lineHeight: '1.4', color: '#141313' }}>{children}</p>
 }
 function SectionTitle({ children }: { children: React.ReactNode }) {
-  return <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '40px', lineHeight: '48px', color: '#141313' }}>{children}</p>
+  return <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(24px, 6vw, 40px)', lineHeight: '1.2', color: '#141313' }}>{children}</p>
 }
 function Divider() {
   return <div style={{ width: '100%', height: '1px', backgroundColor: '#141313' }} />
@@ -211,7 +211,7 @@ export default function EmissorDeNotasFiscaisPage() {
   const t = content[locale as keyof typeof content] ?? content.pt
 
   return (
-    <div style={{ backgroundColor: '#fff', fontFamily: IBM }}>
+    <div style={{ backgroundColor: '#fff', fontFamily: IBM, overflowX: 'hidden', maxWidth: '100vw' }}>
 
       {/* BACK */}
       <div className="px-6 lg:px-[120px]" style={{ paddingTop: '32px' }}>
@@ -232,12 +232,12 @@ export default function EmissorDeNotasFiscaisPage() {
         <SectionTitle>{t.caseTitle}</SectionTitle>
         <SectionLabel>{t.caseLabel}</SectionLabel>
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-[40px]">
-          <p style={{ flex: 1, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.contextoLabel}</strong>{t.contexto}</p>
-          <p style={{ flex: 1, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.valorLabel}</strong>{t.valor}</p>
+          <p style={{ flex: 1, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}><strong>{t.contextoLabel}</strong>{t.contexto}</p>
+          <p style={{ flex: 1, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}><strong>{t.valorLabel}</strong>{t.valor}</p>
         </div>
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-[40px]">
-          <p style={{ flex: 1, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.solucaoLabel}</strong>{t.solucao}</p>
-          <p style={{ flex: 1, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.impactoLabel}</strong>{t.impacto}</p>
+          <p style={{ flex: 1, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}><strong>{t.solucaoLabel}</strong>{t.solucao}</p>
+          <p style={{ flex: 1, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}><strong>{t.impactoLabel}</strong>{t.impacto}</p>
         </div>
       </motion.div>
 
@@ -247,10 +247,10 @@ export default function EmissorDeNotasFiscaisPage() {
         <SectionLabel>{t.perfilLabel}</SectionLabel>
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-[100px] items-start">
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '40px' }}>
-            <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.segmentoLabel}</strong>{t.segmento}</p>
+            <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}><strong>{t.segmentoLabel}</strong>{t.segmento}</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <SectionLabel>{t.doresLabel}</SectionLabel>
-              <ul style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '24px', display: 'flex', flexDirection: 'column', gap: '12px', listStyleType: 'disc' }}>
+              <ul style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word', paddingLeft: 'clamp(16px, 5vw, 24px)', display: 'flex', flexDirection: 'column', gap: '12px', listStyleType: 'disc' }}>
                 {t.dores.map((d, i) => <li key={i}><strong>{d.bold}</strong>{d.text}</li>)}
               </ul>
             </div>
@@ -268,8 +268,8 @@ export default function EmissorDeNotasFiscaisPage() {
       <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '56px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
         <SectionTitle>{t.solTitle}</SectionTitle>
         <SectionLabel>{t.solLabel}</SectionLabel>
-        <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.solText1}</p>
-        <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.solText2}</p>
+        <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.solText1}</p>
+        <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.solText2}</p>
       </motion.div>
 
       {/* 5. FLUXO */}
@@ -282,8 +282,8 @@ export default function EmissorDeNotasFiscaisPage() {
         {/* Step 1 */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
           <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step1Title}</p>
-            <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step1Text}</p>
+            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.step1Title}</p>
+            <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.step1Text}</p>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.bifLabel}</SectionLabel>
@@ -300,8 +300,8 @@ export default function EmissorDeNotasFiscaisPage() {
         {/* Step 2 */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
           <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step2Title}</p>
-            <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step2Text}</p>
+            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.step2Title}</p>
+            <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.step2Text}</p>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.dadosLabel}</SectionLabel>
@@ -317,8 +317,8 @@ export default function EmissorDeNotasFiscaisPage() {
         {/* Step 3 */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
           <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step3Title}</p>
-            <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step3Text}</p>
+            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.step3Title}</p>
+            <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.step3Text}</p>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.revisaLabel}</SectionLabel>
@@ -333,8 +333,8 @@ export default function EmissorDeNotasFiscaisPage() {
 
         {/* Steps 4 & 5 */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step45Title}</p>
-          <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.step45Text}</p>
+          <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.step45Title}</p>
+          <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.step45Text}</p>
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-[60px] mt-2">
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', flex: 1 }}>
               <SectionLabel>{t.loadingLabel}</SectionLabel>

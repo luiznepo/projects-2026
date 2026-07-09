@@ -252,10 +252,10 @@ function Badge({ n, style }: { n: number; style?: React.CSSProperties }) {
   )
 }
 function SectionLabel({ children }: { children: React.ReactNode }) {
-  return <p style={{ fontFamily: IBM, fontWeight: 600, fontStyle: 'italic', fontSize: '18px', lineHeight: '24px', color: '#141313' }}>{children}</p>
+  return <p style={{ fontFamily: IBM, fontWeight: 600, fontStyle: 'italic', fontSize: 'clamp(15px, 4vw, 18px)', lineHeight: '1.4', color: '#141313' }}>{children}</p>
 }
 function SectionTitle({ children }: { children: React.ReactNode }) {
-  return <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '40px', lineHeight: '48px', color: '#141313' }}>{children}</p>
+  return <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(24px, 6vw, 40px)', lineHeight: '1.2', color: '#141313' }}>{children}</p>
 }
 function Divider() {
   return <div style={{ width: '100%', height: '1px', backgroundColor: '#141313' }} />
@@ -271,7 +271,7 @@ export default function CatalogoDeProdutosPage() {
   const t = content[locale as keyof typeof content] ?? content.pt
 
   return (
-    <div style={{ backgroundColor: '#fff', fontFamily: IBM }}>
+    <div style={{ backgroundColor: '#fff', fontFamily: IBM, overflowX: 'hidden', maxWidth: '100vw' }}>
 
       {/* BACK */}
       <div className="px-6 lg:px-[120px]" style={{ paddingTop: '32px' }}>
@@ -283,7 +283,7 @@ export default function CatalogoDeProdutosPage() {
 
       {/* 1. HEADER */}
       <motion.div {...fadeIn()} className="px-6 lg:px-[120px]" style={{ paddingTop: '40px', paddingBottom: '40px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        <p style={{ fontFamily: IBM, fontWeight: 600, fontStyle: 'italic', fontSize: '18px', lineHeight: '24px', color: '#141313' }}>{t.headerLabel}</p>
+        <p style={{ fontFamily: IBM, fontWeight: 600, fontStyle: 'italic', fontSize: 'clamp(14px, 4vw, 18px)', lineHeight: '1.4', color: '#141313' }}>{t.headerLabel}</p>
         <h1 style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(28px, 6vw, 48px)', lineHeight: '1.2', color: '#141313', textTransform: 'uppercase' }}>{t.headerTitle}</h1>
       </motion.div>
 
@@ -292,12 +292,12 @@ export default function CatalogoDeProdutosPage() {
         <SectionTitle>{t.caseTitle}</SectionTitle>
         <SectionLabel>{t.caseLabel}</SectionLabel>
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-[40px]">
-          <p style={{ flex: 1, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.contextoLabel}</strong>{t.contexto}</p>
-          <p style={{ flex: 1, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.objetivoLabel}</strong>{t.objetivo}</p>
+          <p style={{ flex: 1, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}><strong>{t.contextoLabel}</strong>{t.contexto}</p>
+          <p style={{ flex: 1, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}><strong>{t.objetivoLabel}</strong>{t.objetivo}</p>
         </div>
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-[40px]">
-          <p style={{ flex: 1, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.solucaoLabel}</strong>{t.solucao}</p>
-          <p style={{ flex: 1, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.papelLabel}</strong>{t.papel}</p>
+          <p style={{ flex: 1, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}><strong>{t.solucaoLabel}</strong>{t.solucao}</p>
+          <p style={{ flex: 1, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}><strong>{t.papelLabel}</strong>{t.papel}</p>
         </div>
       </motion.div>
 
@@ -307,12 +307,12 @@ export default function CatalogoDeProdutosPage() {
         <SectionLabel>{t.processoLabel}</SectionLabel>
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-[100px] items-start">
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '40px' }}>
-            <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', whiteSpace: 'pre-line' }}>
+            <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word', whiteSpace: 'pre-line' }}>
               <strong>{t.comoLabel}</strong>{t.como}
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <SectionLabel>{t.needsLabel}</SectionLabel>
-              <ul style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '24px', display: 'flex', flexDirection: 'column', gap: '12px', listStyleType: 'disc' }}>
+              <ul style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word', paddingLeft: 'clamp(16px, 5vw, 24px)', display: 'flex', flexDirection: 'column', gap: '12px', listStyleType: 'disc' }}>
                 {t.needs.map((n, i) => <li key={i}><strong>{n.bold}</strong>{n.text}</li>)}
               </ul>
             </div>
@@ -335,10 +335,10 @@ export default function CatalogoDeProdutosPage() {
         <SectionLabel>{t.ferramentaLabel}</SectionLabel>
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-[100px] items-start">
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '40px' }}>
-            <p style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}><strong>{t.cenarioLabel}</strong>{t.cenario}</p>
+            <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}><strong>{t.cenarioLabel}</strong>{t.cenario}</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.opTitle}</p>
-              <ol style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '28px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.opTitle}</p>
+              <ol style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word', paddingLeft: 'clamp(18px, 5vw, 28px)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 {t.ops.map((op, i) => <li key={i}>{op}</li>)}
               </ol>
             </div>
@@ -356,7 +356,7 @@ export default function CatalogoDeProdutosPage() {
         <SectionTitle>{t.redesenhoTitle}</SectionTitle>
         <SectionLabel>{t.redesenhoLabel}</SectionLabel>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
-          <ol style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '28px' }}>
+          <ol style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word', paddingLeft: 'clamp(18px, 5vw, 28px)' }}>
             <li>{t.step1}</li>
           </ol>
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-[217px]">
@@ -369,7 +369,7 @@ export default function CatalogoDeProdutosPage() {
               <img src={imgWireList} alt="Wireframe list" style={{ width: '100%', height: 'auto', maxHeight: '356px', objectFit: 'cover', display: 'block' }} />
             </div>
           </div>
-          <ol start={2} style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '28px' }}>
+          <ol start={2} style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word', paddingLeft: 'clamp(18px, 5vw, 28px)' }}>
             <li>{t.step2}</li>
           </ol>
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-[217px]">
@@ -394,12 +394,12 @@ export default function CatalogoDeProdutosPage() {
         {/* Part A */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
           <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.melhorias}</p>
-            <ol style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '28px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.melhorias}</p>
+            <ol style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word', paddingLeft: 'clamp(18px, 5vw, 28px)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {t.finalImprovementsA.map((item, i) => <li key={i}>{item}</li>)}
               <li>
                 {t.finalImprovementsALast}
-                <ol style={{ listStyleType: 'lower-alpha', paddingLeft: '28px', marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                <ol style={{ listStyleType: 'lower-alpha', paddingLeft: 'clamp(18px, 5vw, 28px)', marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
                   {t.finalSubItems.map((sub, i) => <li key={i}>{sub}</li>)}
                 </ol>
               </li>
@@ -422,8 +422,8 @@ export default function CatalogoDeProdutosPage() {
         {/* Part B */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
           <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)' }}>{t.melhorias}</p>
-            <ol style={{ fontSize: '17px', lineHeight: '28px', color: 'rgba(20,19,19,0.8)', paddingLeft: '28px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.melhorias}</p>
+            <ol style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word', paddingLeft: 'clamp(18px, 5vw, 28px)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {t.finalImprovementsB.map((item, i) => <li key={i}>{item}</li>)}
             </ol>
           </div>
