@@ -244,7 +244,7 @@ export default function FrenteDeCaixaPage() {
       <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '56px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <SectionTitle>{t.perfilTitle}</SectionTitle>
         <SectionLabel>{t.perfilLabel}</SectionLabel>
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[100px] items-start">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[40px] items-start">
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '40px' }}>
             <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}><strong>{t.segmentoLabel}</strong>{t.segmento}</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -254,7 +254,7 @@ export default function FrenteDeCaixaPage() {
               </ul>
             </div>
           </div>
-          <div className="w-full lg:w-[540px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div className="w-full lg:w-[30%] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.mainScreenLabel}</SectionLabel>
             <div style={{ borderRadius: '11px', overflow: 'hidden', border: '1px solid rgba(0,0,0,0.08)' }}>
               <img src={imgWebMain} alt="POS Web main screen" style={{ width: '100%', height: 'auto', display: 'block' }} />
@@ -271,14 +271,14 @@ export default function FrenteDeCaixaPage() {
         </div>
 
         {/* Cart */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
-          <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[40px] items-start">
+          <div className="w-full lg:flex-1 min-w-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.cartTitle}</p>
             <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.cartText}</p>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div className="w-full lg:w-[35%] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.cartLabel}</SectionLabel>
-            <div style={{ position: 'relative', maxWidth: '541px' }}>
+            <div style={{ position: 'relative', width: '100%' }}>
               <img src={imgWebCart} alt="Cart" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '8px', border: '1px solid rgba(0,0,0,0.08)' }} />
               <Badge n={1} style={{ top: '52%', left: '46%' }} />
               <Badge n={2} style={{ top: '58%', left: '46%' }} />
@@ -290,14 +290,14 @@ export default function FrenteDeCaixaPage() {
         <Divider />
 
         {/* Payment */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
-          <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[40px] items-start">
+          <div className="w-full lg:flex-1 min-w-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.payTitle}</p>
             <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.payText}</p>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div className="w-full lg:w-[35%] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.payLabel}</SectionLabel>
-            <div style={{ position: 'relative', maxWidth: '541px' }}>
+            <div style={{ position: 'relative', width: '100%' }}>
               <img src={imgWebPayment} alt="Payment" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '8px', border: '1px solid rgba(0,0,0,0.08)' }} />
               <Badge n={4} style={{ top: '38%', left: '80%' }} />
               <Badge n={5} style={{ top: '52%', left: '80%' }} />
@@ -309,14 +309,14 @@ export default function FrenteDeCaixaPage() {
         <Divider />
 
         {/* Confirm */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
-          <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[40px] items-start">
+          <div className="w-full lg:flex-1 min-w-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.confirmTitle}</p>
             <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.confirmText}</p>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div className="w-full lg:w-[35%] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.confirmLabel}</SectionLabel>
-            <img src={imgWebCongrats} alt="Success" style={{ width: '100%', maxWidth: '541px', height: 'auto', display: 'block', borderRadius: '8px', border: '1px solid rgba(0,0,0,0.08)' }} />
+            <img src={imgWebCongrats} alt="Success" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '8px', border: '1px solid rgba(0,0,0,0.08)' }} />
           </div>
         </div>
       </motion.div>

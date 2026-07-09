@@ -245,7 +245,7 @@ export default function EmissorDeNotasFiscaisPage() {
       <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '56px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <SectionTitle>{t.perfilTitle}</SectionTitle>
         <SectionLabel>{t.perfilLabel}</SectionLabel>
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[100px] items-start">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[40px] items-start">
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '40px' }}>
             <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}><strong>{t.segmentoLabel}</strong>{t.segmento}</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -255,7 +255,7 @@ export default function EmissorDeNotasFiscaisPage() {
               </ul>
             </div>
           </div>
-          <div className="w-full lg:w-[540px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div className="w-full lg:w-[30%] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.entradaLabel}</SectionLabel>
             <div style={{ borderRadius: '11px', overflow: 'hidden' }}>
               <img src={imgVendas} alt="Sales list" style={{ width: '100%', height: 'auto', display: 'block' }} />
@@ -280,14 +280,14 @@ export default function EmissorDeNotasFiscaisPage() {
         </div>
 
         {/* Step 1 */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
-          <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[40px] items-start">
+          <div className="w-full lg:flex-1 min-w-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.step1Title}</p>
             <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.step1Text}</p>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div className="w-full lg:w-[35%] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.bifLabel}</SectionLabel>
-            <div style={{ position: 'relative', width: '100%', maxWidth: '541px' }}>
+            <div style={{ position: 'relative', width: '100%' }}>
               <img src={imgBifurcador} alt="Invoice type selection" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '8px' }} />
               <Badge n={1} style={{ top: '35%', left: '25%' }} />
               <Badge n={2} style={{ top: '35%', left: '65%' }} />
@@ -298,14 +298,14 @@ export default function EmissorDeNotasFiscaisPage() {
         <Divider />
 
         {/* Step 2 */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
-          <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[40px] items-start">
+          <div className="w-full lg:flex-1 min-w-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.step2Title}</p>
             <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.step2Text}</p>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div className="w-full lg:w-[35%] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.dadosLabel}</SectionLabel>
-            <div style={{ position: 'relative', width: '100%', maxWidth: '541px' }}>
+            <div style={{ position: 'relative', width: '100%' }}>
               <img src={imgDados} alt="Customer data" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '8px' }} />
               <Badge n={3} style={{ top: '28%', left: '82%' }} />
             </div>
@@ -315,14 +315,14 @@ export default function EmissorDeNotasFiscaisPage() {
         <Divider />
 
         {/* Step 3 */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
-          <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[40px] items-start">
+          <div className="w-full lg:flex-1 min-w-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.step3Title}</p>
             <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.step3Text}</p>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div className="w-full lg:w-[35%] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.revisaLabel}</SectionLabel>
-            <div style={{ position: 'relative', width: '100%', maxWidth: '541px' }}>
+            <div style={{ position: 'relative', width: '100%' }}>
               <img src={imgRevisa} alt="Review" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '8px' }} />
               <Badge n={4} style={{ top: '80%', left: '50%' }} />
             </div>

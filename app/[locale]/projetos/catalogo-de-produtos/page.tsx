@@ -305,8 +305,8 @@ export default function CatalogoDeProdutosPage() {
       <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '56px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <SectionTitle>{t.processoTitle}</SectionTitle>
         <SectionLabel>{t.processoLabel}</SectionLabel>
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[100px] items-start">
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '40px' }}>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[40px] items-start">
+          <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '40px' }}>
             <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word', whiteSpace: 'pre-line' }}>
               <strong>{t.comoLabel}</strong>{t.como}
             </p>
@@ -317,7 +317,7 @@ export default function CatalogoDeProdutosPage() {
               </ul>
             </div>
           </div>
-          <div className="w-full lg:w-[617px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div className="w-full lg:w-[30%] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <div style={{ borderRadius: '20px', overflow: 'hidden', maxHeight: '376px' }}>
               <img src={imgResearch} alt="Research" style={{ width: '100%', height: 'auto', objectFit: 'cover', display: 'block' }} />
             </div>
@@ -333,8 +333,8 @@ export default function CatalogoDeProdutosPage() {
       <motion.div {...fadeIn(0.05)} className="px-6 lg:px-[120px]" style={{ paddingBottom: '56px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <SectionTitle>{t.ferramentaTitle}</SectionTitle>
         <SectionLabel>{t.ferramentaLabel}</SectionLabel>
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[100px] items-start">
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '40px' }}>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[40px] items-start">
+          <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '40px' }}>
             <p style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}><strong>{t.cenarioLabel}</strong>{t.cenario}</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.opTitle}</p>
@@ -343,7 +343,7 @@ export default function CatalogoDeProdutosPage() {
               </ol>
             </div>
           </div>
-          <div className="w-full lg:w-[540px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div className="w-full lg:w-[30%] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <div style={{ borderRadius: '11px', overflow: 'hidden' }}>
               <img src={imgBefore1} alt="Before" style={{ width: '100%', height: 'auto', display: 'block' }} />
             </div>
@@ -359,12 +359,12 @@ export default function CatalogoDeProdutosPage() {
           <ol style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word', paddingLeft: 'clamp(18px, 5vw, 28px)' }}>
             <li>{t.step1}</li>
           </ol>
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-[217px]">
-            <div className="w-full lg:w-[540px]" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-[32px]">
+            <div className="w-full lg:flex-1 min-w-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <SectionLabel>{t.layer1Add}</SectionLabel>
               <img src={imgWireAdd} alt="Wireframe add" style={{ width: '100%', height: 'auto', maxHeight: '356px', objectFit: 'contain', display: 'block' }} />
             </div>
-            <div className="w-full lg:w-[540px]" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <div className="w-full lg:flex-1 min-w-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <SectionLabel>{t.layer2List}</SectionLabel>
               <img src={imgWireList} alt="Wireframe list" style={{ width: '100%', height: 'auto', maxHeight: '356px', objectFit: 'cover', display: 'block' }} />
             </div>
@@ -372,14 +372,14 @@ export default function CatalogoDeProdutosPage() {
           <ol start={2} style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word', paddingLeft: 'clamp(18px, 5vw, 28px)' }}>
             <li>{t.step2}</li>
           </ol>
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-[217px]">
-            <div className="w-full lg:w-[540px]" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-[32px]">
+            <div className="w-full lg:flex-1 min-w-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <SectionLabel>{t.layer1Add}</SectionLabel>
               <div style={{ overflow: 'hidden', maxHeight: '366px' }}>
                 <img src={imgMidAdd} alt="Mid-fi add" style={{ width: '100%', height: 'auto', objectFit: 'cover', objectPosition: 'top', display: 'block' }} />
               </div>
             </div>
-            <div className="w-full lg:w-[540px]" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <div className="w-full lg:flex-1 min-w-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <SectionLabel>{t.layer2List}</SectionLabel>
               <img src={imgMidList} alt="Mid-fi list" style={{ width: '100%', height: 'auto', maxHeight: '363px', objectFit: 'cover', display: 'block' }} />
             </div>
@@ -392,8 +392,8 @@ export default function CatalogoDeProdutosPage() {
         <SectionTitle>{t.finalTitle}</SectionTitle>
 
         {/* Part A */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
-          <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[40px] items-start">
+          <div className="w-full lg:flex-1 min-w-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.melhorias}</p>
             <ol style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word', paddingLeft: 'clamp(18px, 5vw, 28px)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {t.finalImprovementsA.map((item, i) => <li key={i}>{item}</li>)}
@@ -405,9 +405,9 @@ export default function CatalogoDeProdutosPage() {
               </li>
             </ol>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div className="w-full lg:w-[35%] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.layer1Add}</SectionLabel>
-            <div style={{ position: 'relative', width: '100%', maxWidth: '541px' }}>
+            <div style={{ position: 'relative', width: '100%' }}>
               <img src={imgFinalAdd} alt="Final add" style={{ width: '100%', height: 'auto', display: 'block' }} />
               <Badge n={1} style={{ top: '23%', left: '64%' }} />
               <Badge n={2} style={{ top: '80%', left: '22%' }} />
@@ -420,16 +420,16 @@ export default function CatalogoDeProdutosPage() {
         <Divider />
 
         {/* Part B */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[90px] items-start">
-          <div className="w-full lg:w-[677px] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[40px] items-start">
+          <div className="w-full lg:flex-1 min-w-0" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <p style={{ fontFamily: IBM, fontWeight: 700, fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word' }}>{t.melhorias}</p>
             <ol style={{ fontSize: 'clamp(14px, 4vw, 17px)', lineHeight: '1.65', color: 'rgba(20,19,19,0.8)', overflowWrap: 'break-word', wordBreak: 'break-word', paddingLeft: 'clamp(18px, 5vw, 28px)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {t.finalImprovementsB.map((item, i) => <li key={i}>{item}</li>)}
             </ol>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div className="w-full lg:w-[35%] lg:flex-shrink-0" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <SectionLabel>{t.layer2List}</SectionLabel>
-            <div style={{ position: 'relative', width: '100%', maxWidth: '536px' }}>
+            <div style={{ position: 'relative', width: '100%' }}>
               <img src={imgFinalList} alt="Final list" style={{ width: '100%', height: 'auto', display: 'block' }} />
               <Badge n={1} style={{ top: '30%', left: '69%' }} />
               <Badge n={2} style={{ top: '68%', left: '94%' }} />
